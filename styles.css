@@ -34,7 +34,7 @@ header {
     padding: 20px;
     background-color: var(--main-blue);
     transition: background-color 0.5s ease;
-    position: relative; /* Add relative positioning */
+    position: relative;
 }
 
 body.night header {
@@ -171,10 +171,10 @@ body.night .hero-content {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 80px; /* Adjust this value based on your header height */
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    gap: 20px; /* Space between sun and moon */
+    gap: 20px;
 }
 
 .sun, .moon {
