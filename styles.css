@@ -1,0 +1,303 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-black: #1e1c1c;
+    --main-blue: #a7d6dc;
+    --main-pink: #FFD1E3;
+    --main-dark: #00008B;
+    --main-green: #008000;
+    --night-sky: #2c3e50;
+    --moon-color: #f9f9f9;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Anek Devanagari", sans-serif;
+    background-color: var(--main-blue);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+body.night {
+    background-color: var(--night-sky);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-blue);
+    transition: background-color 0.5s ease;
+    position: relative; /* Add relative positioning */
+}
+
+body.night header {
+    background-color: var(--night-sky);
+}
+
+.logo {
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: "Architects Daughter", sans-serif;
+    color: var(--main-dark);
+}
+
+body.night .logo {
+    color: var(--moon-color);
+}
+
+.logo span {
+    color: var(--main-green);
+}
+
+nav {
+    position: relative;
+    margin-top: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--main-blue);
+    background-color: var(--main-white);
+    border: 3px solid transparent;
+    padding: 7px 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
+}
+
+nav ul li a:hover {
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-15px);
+}
+
+.hero {
+    background: url('image.png') no-repeat bottom;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: var(--main-black);
+    font-family: "Architects Daughter", sans-serif;
+}
+
+body.night .hero-content {
+    color: var(--moon-color);
+}
+
+.hero-content h1 {
+    font-size: 2em;
+}
+
+.hero-content h1 span {
+    color: var(--main-green);
+}
+
+.floating-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    opacity: 0.8;
+    animation: float 20s infinite linear;
+}
+
+.cloud img {
+    width: 100%;
+    height: auto;
+}
+
+.cloud-1 {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.cloud-2 {
+    top: 25%;
+    left: 10%;
+    animation-delay: 7s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+}
+
+.sun-moon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px; /* Adjust this value based on your header height */
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 20px; /* Space between sun and moon */
+}
+
+.sun, .moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.sun {
+    background-color: yellow;
+    box-shadow: 0 0 20px 5px yellow;
+}
+
+body.night .sun {
+    opacity: 0;
+}
+
+.moon {
+    background-color: var(--moon-color);
+    box-shadow: 0 0 20px 5px var(--moon-color);
+    opacity: 0;
+}
+
+body.night .moon {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--main-blue);
+        width: 100%;
+    }
+
+    body.night nav ul {
+        background-color: var(--night-sky);
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* Night Sky Effect */
+body.night .sky {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #283e51, #0a2342);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+body.night .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    z-index: 0;
+}
+
+body.night h3 {
+    font-family: "Rammetto One";
+    text-align: center;
+    font-size: 1.75rem;
+    color: #fff;
+    width: 55%;
+    margin: 5rem auto;
+    line-height: 3rem;
+    letter-spacing: 5px;
+}
+
+.cursor-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 10% transparent;
+    background-color: var(--main-white);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.cursor-outline {
+    width: 25px;
+    height: 25px;
+    border: 2px solid transparent;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.cursor-dot, 
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 101;
+    pointer-events: none;
+}
