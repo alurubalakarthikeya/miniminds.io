@@ -42,7 +42,7 @@ body.night header {
 }
 
 .logo {
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: bold;
     font-family: "Architects Daughter", sans-serif;
     color: var(--main-dark);
@@ -63,8 +63,6 @@ nav {
 
 .menu-icon {
     display: none;
-    font-size: 28px;
-    cursor: pointer;
 }
 
 nav ul {
@@ -91,23 +89,35 @@ nav ul li a {
 nav ul li a:hover {
     background-color: var(--main-blue);
     color: var(--main-white);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(-15px);
+}
+
+nav ul.active {
+    display: block !important;
+    float: left;
+    background-color: var(--moon-color);
+    color: var(--night-sky);
 }
 
 .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
     background: url('image.png') no-repeat bottom;
     background-size: cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+}
+
+.tree {
+    position: relative;
+    top: 24px;
 }
 
 .hero-content {
     color: var(--main-black);
     font-family: "Architects Daughter", sans-serif;
+    font-size: 3vh;
+    margin-top: 35vh;
 }
 
 body.night .hero-content {
@@ -115,7 +125,7 @@ body.night .hero-content {
 }
 
 .hero-content h1 {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .hero-content h1 span {
@@ -195,49 +205,68 @@ body.night .sun {
 }
 
 .moon {
-    background-color: var(--moon-color);
-    box-shadow: 0 0 20px 5px var(--moon-color);
-    opacity: 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px 5px #fff;
 }
 
 body.night .moon {
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.5em;
-    }
+#menu-items.active {
+    display: block;
+}
 
+@media (max-width: 700px) {
     nav ul {
         display: none;
-        flex-direction: column;
-        align-items: center;
+        background-color: var(--moon-color);
+        color: var(--night-sky);
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 5px;
         position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: var(--main-blue);
-        width: 100%;
+        right: 0px;
+        transform: translateX(18px);
     }
 
-    body.night nav ul {
-        background-color: var(--night-sky);
+    .active {
+        float: right;
     }
 
     nav ul li {
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        padding: 10px 15px;
+        margin-top: 20px;
     }
 
     .menu-icon {
         display: block;
     }
 
-    nav.active ul {
-        display: flex;
+    nav.active ul li {
+        display: block;
+        background-color: var(--moon-color);
+        color: var(--night-sky);
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--main-blue);
+        background-color: var(--moon-color);
+        transition: 0.5s ease-in-out;
+        border-radius: 0;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    nav ul li a:hover {
+        background-color: var(--main-blue);
+        color: var(--main-white);
+    }
+
+    .hero-content {
+        font-size: 3vh;
     }
 }
 
@@ -259,7 +288,7 @@ body.night .stars {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: block;
     background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
     z-index: 0;
@@ -269,7 +298,6 @@ body.night h3 {
     font-family: "Rammetto One";
     text-align: center;
     font-size: 1.75rem;
-    color: #fff;
     width: 55%;
     margin: 5rem auto;
     line-height: 3rem;
@@ -300,4 +328,21 @@ body.night h3 {
     border-radius: 50%;
     z-index: 101;
     pointer-events: none;
+}
+
+.about {
+    background-color: var(--main-green);
+    color: var(--main-white);
+    padding: 60px;
+    margin: 0;
+    border-top: 4px solid var(--main-white);
+    text-align: justify;
+}
+
+body.night .cursor-dot {
+    background-color: var(--moon-color);
+}
+
+body.night .cursor-outline {
+    border-color: var(--moon-color);
 }

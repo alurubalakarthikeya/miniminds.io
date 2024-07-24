@@ -1,26 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const menuItems = document.getElementById('menu-items');
+document.addEventListener('DOMContentLoaded', () => {
+    // Sun and Moon switch
     const sun = document.getElementById('sun');
     const moon = document.getElementById('moon');
     const body = document.body;
 
-    menuIcon.addEventListener('click', function() {
+    sun.addEventListener('click', () => {
+        body.classList.remove('night')
+    });
+
+    moon.addEventListener('click', () => {
+        body.classList.add('night');
+        body.classList.add('nightmoon');
+    });
+
+
+    // Menu toggle
+    const menuIcon = document.getElementById('menu-icon');
+    const menuItems = document.getElementById('menu-items');
+
+    menuIcon.addEventListener('click', () => {
         menuItems.classList.toggle('active');
     });
 
-    sun.addEventListener('click', function() {
-        body.classList.remove('night');
-    });
-
-    moon.addEventListener('click', function() {
-        body.classList.add('night');
-    });
-
+    // Cursor effect
     const cursorDot = document.querySelector("[data-cursor-dot]");
     const cursorOutline = document.querySelector("[data-cursor-outline]");
     
-    window.addEventListener("mousemove", function(e) {
+    window.addEventListener("mousemove", (e) => {
         const posX = e.clientX;
         const posY = e.clientY;
 
