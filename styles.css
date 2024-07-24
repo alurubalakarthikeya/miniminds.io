@@ -122,6 +122,18 @@ nav ul.active {
     margin-top: 35vh;
 }
 
+.hero-content {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.hero-content.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 body.night .hero-content {
     color: var(--moon-color);
 }
@@ -242,7 +254,6 @@ body.night .moon {
 
     nav ul.active {
         display: block;
-        float: right;
     }
 
     nav ul li {
@@ -266,9 +277,10 @@ body.night .moon {
         color: var(--main-blue);
         background-color: var(--moon-color);
         transition: 0.5s ease-in-out;
+        position: relative;
         border-radius: 0;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-        margin: 5px 0px;
+        margin: 0px 0px 20px 0px;
         width: 100%;
     }
     
@@ -281,6 +293,20 @@ body.night .moon {
 
     .hero-content {
         font-size: 3vh;
+    }
+
+    .course {
+        height: 100px;
+        width: 100px;
+        background-color: var(--main-green);
+        border-radius: 10px;
+        display: inline-block;
+        margin: 15px;
+        text-align: center;
+    }
+
+    .about {
+        padding: 55px;
     }
 }
 
@@ -355,4 +381,41 @@ body.night h3 {
 
 body.night .cursor-dot {
     background-color: var(--moon-color);
+}
+
+.menu-icon {
+    color: var(--main-white);
+}
+
+.stone {
+    position: relative;
+    top: 30px;
+}
+
+.courses {
+    padding: 60px;
+    border-top: 3px solid var(--moon-color);
+    background-color: var(--night-sky);
+    color: var(--main-white);
+}
+
+.course {
+    height: 230px;
+    width: 220px;
+    background-color: var(--main-green);
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.imagee {
+    font-size: 80px;
+    margin: 10px 0px;
+}
+
+.imag {
+    font-size: 10px;
 }

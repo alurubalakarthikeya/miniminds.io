@@ -1,32 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const heroContent = document.querySelector('.hero-content');
+    heroContent.classList.add('visible');
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
     // Elements
-    const sun = document.getElementById('sun');
-    const moon = document.getElementById('moon');
-    const body = document.body;
     const menuIcon = document.getElementById('menu-icon');
     const menuItems = document.getElementById('menu-items');
+    const sunElement = document.querySelector('.sun');
+    const moonElement = document.querySelector('.moon');
+    const bodyElement = document.body;
+    let clickCounter = 0;
 
-    // Initialize visibility
-    sun.style.display = 'block';
-    moon.style.display = 'none';
-
-    // Function to switch to night mode
-    function switchToNightMode() {
-        body.classList.add('night');
-        sun.style.display = 'none';
-        moon.style.display = 'block';
+// Function to toggle between day and night mode
+   function toggleMode() {
+    clickCounter++;
+     if (clickCounter % 2 !== 0) {
+        // Odd click: switch to night mode
+        bodyElement.classList.add('night');
+        sunElement.style.display = 'none';
+        moonElement.style.display = 'block';
+    } else {
+        // Even click: switch to day mode
+        bodyElement.classList.remove('night');
+        sunElement.style.display = 'block';
+        moonElement.style.display = 'none';
     }
-
-    // Function to switch to day mode
-    function switchToDayMode() {
-        body.classList.remove('night');
-        moon.style.display = 'none';
-        sun.style.display = 'block';
-    }
-
-    // Event listeners for sun and moon
-    sun.addEventListener('click', switchToNightMode);
-    moon.addEventListener('click', switchToDayMode);
+  }
+  sunElement.addEventListener('click', toggleMode);
+  moonElement.addEventListener('click', toggleMode);
+  sunElement.style.display = 'block';
+  moonElement.style.display = 'none';
 
     // Menu toggle
     menuIcon.addEventListener('click', () => {
@@ -53,5 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { duration: 500, fill: "forwards" });
     });
 });
-
 
