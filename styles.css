@@ -197,21 +197,25 @@ body.night .hero-content {
 }
 
 .sun {
+    display: block;
     background-color: yellow;
     box-shadow: 0 0 20px 5px yellow;
 }
 
 body.night .sun {
     opacity: 0;
+    display: none;
 }
 
 .moon {
+    display: none;
     background-color: #fff;
     box-shadow: 0 0 20px 5px #fff;
 }
 
 body.night .moon {
     opacity: 1;
+    display: block;
 }
 
 #menu-items.active {
@@ -222,16 +226,20 @@ body.night .moon {
     nav ul {
         display: none;
         background-color: var(--moon-color);
+        text-align: center;
         color: var(--night-sky);
         border-radius: 20px;
-        padding: 20px;
         margin-top: 5px;
+        width: 18vh;
         position: absolute;
+        overflow: hidden;
         right: 0px;
-        transform: translateX(18px);
+        transform: translateX(15px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
     }
 
-    .active {
+    nav ul.active {
+        display: block;
         float: right;
     }
 
@@ -251,19 +259,22 @@ body.night .moon {
     }
 
     nav ul li a {
+        display: block;
         text-decoration: none;
         color: var(--main-blue);
         background-color: var(--moon-color);
         transition: 0.5s ease-in-out;
         border-radius: 0;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-        margin-top: 10px;
+        margin: 5px 0px;
         width: 100%;
     }
     
     nav ul li a:hover {
         background-color: var(--main-blue);
         color: var(--main-white);
+        border-radius: 10px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
     }
 
     .hero-content {
@@ -278,7 +289,7 @@ body.night .sky {
     height: 100vh;
     background: linear-gradient(to top, #283e51, #0a2342);
     z-index: -1;
-    top: 0;
+    top: 20px;
     left: 0;
 }
 
@@ -342,8 +353,4 @@ body.night h3 {
 
 body.night .cursor-dot {
     background-color: var(--moon-color);
-}
-
-body.night .cursor-outline {
-    border-color: var(--moon-color);
 }
