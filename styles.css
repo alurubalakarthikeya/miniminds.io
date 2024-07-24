@@ -109,10 +109,11 @@ nav ul.active {
     text-align: center;
 }
 
-.tree {
+.tree-1 {
     position: relative;
     top: 24px;
 }
+
 
 .hero-content {
     color: var(--main-black);
@@ -189,8 +190,8 @@ body.night .hero-content {
 }
 
 .sun, .moon {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     cursor: pointer;
     transition: opacity 0.5s ease;
@@ -236,6 +237,7 @@ body.night .moon {
         right: 0px;
         transform: translateX(15px);
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
+        z-index: 1;
     }
 
     nav ul.active {

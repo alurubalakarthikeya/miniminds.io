@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const menuItems = document.getElementById('menu-items');
 
-    // Initial visibility settings
+    // Initialize visibility
     sun.style.display = 'block';
     moon.style.display = 'none';
 
