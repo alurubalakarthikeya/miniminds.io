@@ -34,8 +34,11 @@ header {
     align-items: center;
     padding: 20px;
     background-color: var(--main-blue);
+    border-bottom: 2px solid var(--main-white);
     transition: background-color 0.5s ease;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 body.night header {
@@ -169,13 +172,13 @@ body.night .hero-content {
 }
 
 .cloud-1 {
-    top: 10%;
+    top: 16%;
     left: 5%;
     animation-delay: 0s;
 }
 
 .cloud-2 {
-    top: 25%;
+    top: 30%;
     left: 10%;
     animation-delay: 7s;
 }
@@ -195,7 +198,7 @@ body.night .hero-content {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 80px;
+    top: 110px;
     left: 50%;
     transform: translateX(-50%);
     gap: 20px;
@@ -206,7 +209,7 @@ body.night .hero-content {
     height: 85px;
     border-radius: 50%;
     cursor: pointer;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.8s ease;
 }
 
 .sun {
@@ -319,6 +322,7 @@ body.night .sky {
     z-index: -1;
     top: 20px;
     left: 0;
+    transition: 2s ease-in-out;
 }
 
 body.night .stars {
@@ -342,6 +346,22 @@ body.night h3 {
     margin: 5rem auto;
     line-height: 3rem;
     letter-spacing: 5px;
+}
+
+body.night nav ul li a {
+    background-color: var(--night-sky);
+    color: var(--moon-color);
+}
+
+body.night nav ul li a:hover {
+    color: var(--main-green);
+}
+
+body.night nav ul {
+    background-color: var(--night-sky);
+    color: var(--moon-color);
+    margin-bottom: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
 }
 
 .cursor-dot {
@@ -409,6 +429,13 @@ body.night .cursor-dot {
     display: inline-block;
     margin: 20px;
     text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    transition: 1s ease-in;
+}
+
+.course:hover {
+    color: var(--main-green);
+    background-color: var(--main-dark);
 }
 
 .imagee {
@@ -418,4 +445,9 @@ body.night .cursor-dot {
 
 .imag {
     font-size: 72px;
+}
+
+.heading {
+    font-size: 3.5vh;
+    padding-bottom: 10px;
 }
