@@ -504,7 +504,7 @@ body.night .cursor-dot {
 }
 
 .about img {
-    float: left;
+    position: relative;
     overflow: hidden;
 }
 
@@ -536,4 +536,8 @@ ul.icons {
     color: var(--main-green);
     background-color: var(--moon-color);
     cursor: pointer;
+}
+
+a:visited {
+    color: inherit; /* or specify the same color as unvisited links to remove the purple color */
 }
