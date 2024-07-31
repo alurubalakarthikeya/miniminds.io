@@ -138,10 +138,6 @@ body.night .hero-content {
     color: var(--moon-color);
 }
 
-.hero-content h1 {
-    font-size: 3em;
-}
-
 .hero-content span {
     color: var(--main-green);
 }
@@ -176,7 +172,7 @@ body.night .hero-content {
 
 .cloud-2 {
     top: 7%;
-    left: -65%;
+    left: -70%;
     animation-delay: 2s;
 }
 
@@ -521,11 +517,9 @@ body.night .cursor-dot {
 
 .about img {
     float: left;
-    position: relative;
-    right: 100px;
 }
 
-.icons {
+ul.icons {
     display:inline-flex;
     left: 50%;
     list-style-type: none;
@@ -536,7 +530,7 @@ body.night .cursor-dot {
     border-radius: 50%;
     color: var(--moon-color);
     background-color: var(--main-green);
-    font-size: 2vh;
+    font-size: 2.2vh;
     padding: 12px 16px;
     margin: 15px;
 }
