@@ -1,37 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const heroContent = document.querySelector('.hero-content');
-    heroContent.classList.add('visible');
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const menuIcon = document.getElementById('menu-icon');
     const menuItems = document.getElementById('menu-items');
-    const sunElement = document.querySelector('.sun');
-    const moonElement = document.querySelector('.moon');
     const bodyElement = document.body;
-    let clickCounter = 0;
 
-// Function to toggle between day and night mode
-   function toggleMode() {
-    clickCounter++;
-     if (clickCounter % 2 !== 0) {
-        // Odd click: switch to night mode
-        bodyElement.classList.add('night');
-        sunElement.style.display = 'none';
-        moonElement.style.display = 'block';
-    } else {
-        // Even click: switch to day mode
-        bodyElement.classList.remove('night');
-        sunElement.style.display = 'block';
-        moonElement.style.display = 'none';
+    // Function to toggle between day and night mode
+    function toggleMode() {
+        bodyElement.classList.toggle('night');
+        bodyElement.classList.toggle('day');
     }
-  }
-  sunElement.addEventListener('click', toggleMode);
-  moonElement.addEventListener('click', toggleMode);
-  sunElement.style.display = 'block';
-  moonElement.style.display = 'none';
 
     // Menu toggle
     menuIcon.addEventListener('click', () => {

@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Minds</title>
+    <title>Home | Mini Minds</title>
+    <link rel="icon" type="image" href="images/miniminds.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="night">
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
     <header>
@@ -18,6 +20,7 @@
             <div id="menu-icon" class="menu-icon">&#9776;</div>
             <ul id="menu-items">
                 <li><a href="#">Home</a></li>
+                <li><a href="#">Games</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#">Contact</a></li>
@@ -26,36 +29,77 @@
     </header>
     <div class="sun-moon-container">
         <div id="sun" class="sun" onclick="toggleMode()"></div>
-        <div id="moon" class="moon nightmoon" onclick="toggleMode()"></div>
+        <div id="moon" class="moon" onclick="toggleMode()"></div>
     </div>
     <div class="hero">
         <div class="hero-content">
-            <h1 style="font-size: 3vh;">Where Learning is <span>made practical</span></h1>
+            <h2 style="font-size: 3vh;">Where Learning is <span>made practical</span></h2><br>
+            <ul class="icons">
+              <li class="icon"><a href=""></a><i class="fa-brands fa-youtube"></i></li>
+              <li class="icon"><a href=""></a><i class="fa-brands fa-linkedin"></i></li>
+              <li class="icon"><a href=""></a><i class="fa-brands fa-instagram"></i></li>
+              <li class="icon"><a href=""></a><i class="fa-brands fa-facebook"></i></li>
+            </ul>
         </div>
         <div class="floating-clouds">
-            <div class="cloud cloud-1 "><img src="images/cloud.png" alt="Cloud"></div>
-            <div class="cloud cloud-2 "><img src="images/cloud.png" alt="Cloud"></div>
+            <div class="cloud cloud-1 "><img src="images/cloudy.png" alt="Cloud"></div>
+            <div class="cloud cloud-2 "><img src="images/cloudy.png" alt="Cloud"></div>
         </div>
     </div>
     <img class="tree-1" src="images/tree.png" alt="Tree" width="200px">
-    <img class="stone" src="images/stone.png" alt="Stone" width="70px">
+    <img class="stone" src="images/rock.png" alt="Stone" width="70px">
     <div id="about" class="about">
-        <h2 class="heading">About Us</h2>
+        <h2 class="heading">Why Us?</h2>
+        <div class="space">
+        <img src="images/about.png" alt="cartoon" width="410px"><br>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quae in eum quis odio a perferendis repudiandae eaque doloremque, facere non voluptatem tempora. Eum totam, doloremque explicabo recusandae ipsum fuga.
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas omnis voluptates voluptatibus? Labore illum maxime similique asperiores eum magnam quisquam doloremque facere voluptas, iste, neque tempore voluptate illo cupiditate rerum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, molestias qui commodi eaque harum corporis iste temporibus perspiciatis facilis ipsa non dolorum enim voluptatum amet a quidem quod modi. Officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, molestias qui commodi eaque harum corporis iste temporibus perspiciatis facilis ipsa non dolorum enim voluptatum amet a quidem quod modi. Officia!</p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas omnis voluptates voluptatibus? Labore illum maxime similique asperiores eum magnam quisquam doloremque facere voluptas, iste, neque tempore voluptate illo cupiditate rerum. Thank you!!!</p>
+        <br><br>
+        <a class="button-about">Know More</a>
+      </div>
     </div>
     <div id="courses" class="courses">
         <h2 class="heading">Courses</h2>
-        <div class="course course-1"><h1 class="imagee">{+-}</h1><br>The Math Game</div>
-        <div class="course course-2"><h1 class="imagee">🧠</h1><br>General Knowledge</div>
-        <div class="course course-3"><h1 class="imagee">Abc</h1><br>English</div>
-        <div class="course course-4"><h1 class="imagee">code;</h1><br>Computers</div>
-        <div class="course course-5"><h1 class="imagee">🌏</h1><br>Environment</div>
-        <div class="course course-6"><h1 class="imag">☀️🌑</h1><br>Solar Systems</div>
+        <div class="card">
+            <img src="images/math.jpeg" alt="Maths" height="100px">
+            <h1>Math</h1>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card">
+            <img src="images/computers.jpeg" alt="computers" height="100px">
+            <h1>Computers</h1>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card">
+            <img src="images/english.jpeg" alt="english" height="100px">
+            <h1>English</h1>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card">
+            <img src="images/environment.jpeg" alt="environment" height="100px">
+            <h1>Environment</h1>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card">
+            <img src="images/solar systems.jpeg" alt="solar" height="100px">
+            <h1>The Universe</h1>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+          <div class="card">
+            <img src="images/general knowledge.jpeg" alt="gk" height="100px">
+            <h1>General Knowledge</h1>
+            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
     </div>
     <div class="sky"></div>
     <div class="stars"></div>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/26fcbf9d31.js" crossorigin="anonymous"></script>
 </body>
 </html>

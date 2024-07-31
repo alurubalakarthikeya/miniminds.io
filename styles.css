@@ -9,7 +9,6 @@
     --moon-color: #f9f9f9;
 }
 
-/* General Reset */
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -19,7 +18,7 @@
 
 body {
     font-family: "Anek Devanagari", sans-serif;
-    background-color: var(--main-blue);
+    background: linear-gradient(to top, #62cff4, #2c67f2);
     overflow-x: hidden;
     transition: background-color 0.5s ease;
 }
@@ -114,20 +113,19 @@ nav ul.active {
 
 .tree-1 {
     position: relative;
-    top: 24px;
+    top: 22px;
 }
-
 
 .hero-content {
     color: var(--main-black);
     font-family: "Architects Daughter", sans-serif;
     font-size: 3vh;
-    margin-top: 35vh;
+    margin-top: 22vh;
 }
 
 .hero-content {
     transform: translateY(50px);
-    opacity: 0;
+    opacity: 1;
     transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
@@ -136,16 +134,17 @@ nav ul.active {
     opacity: 1;
 }
 
-
 body.night .hero-content {
     color: var(--moon-color);
 }
 
 .hero-content h1 {
     font-size: 3em;
+    position: relative;
+    bottom: 100px;
 }
 
-.hero-content h1 span {
+.hero-content span {
     color: var(--main-green);
 }
 
@@ -161,8 +160,8 @@ body.night .hero-content {
 
 .cloud {
     position: absolute;
-    width: 200px;
-    opacity: 0.8;
+    width: 350px;
+    opacity: 0.9;
     animation: float 20s infinite linear;
 }
 
@@ -172,23 +171,28 @@ body.night .hero-content {
 }
 
 .cloud-1 {
-    top: 16%;
-    left: 5%;
+    top: 3%;
+    left: 2%;
     animation-delay: 0s;
 }
 
 .cloud-2 {
-    top: 30%;
-    left: 10%;
-    animation-delay: 7s;
+    top: 7%;
+    left: -60%;
+    animation-delay: 2s;
 }
 
 @keyframes float {
     0% {
-        transform: translateX(0);
+        transform: translateX(-80%);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 1;
     }
     100% {
-        transform: translateX(200%);
+        transform: translateX(300%);
         opacity: 0;
     }
 }
@@ -313,12 +317,11 @@ body.night .moon {
     }
 }
 
-/* Night Sky Effect */
 body.night .sky {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to top, #283e51, #0a2342);
+    background: linear-gradient(to bottom, #1b2735, #2c3e50, #34495e);
     z-index: -1;
     top: 20px;
     left: 0;
@@ -354,14 +357,14 @@ body.night nav ul li a {
 }
 
 body.night nav ul li a:hover {
-    color: var(--main-green);
+    background-color: var(--main-green);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
 }
 
 body.night nav ul {
     background-color: var(--night-sky);
     color: var(--moon-color);
     margin-bottom: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
 }
 
 .cursor-dot {
@@ -405,11 +408,12 @@ body.night .cursor-dot {
 
 .menu-icon {
     color: var(--main-white);
+    margin: 0;
 }
 
 .stone {
     position: relative;
-    top: 30px;
+    top: 34px;
 }
 
 .courses {
@@ -450,4 +454,95 @@ body.night .cursor-dot {
 .heading {
     font-size: 3.5vh;
     padding-bottom: 10px;
+}
+
+.button-about {
+    background-color: var(--main-green);
+    color: var(--moon-color);
+    transition: 0.4s;
+    border: 1px solid var(--moon-color);
+    border-radius: 26px;
+    padding: 12px;
+}
+
+.button-about:hover {
+    background-color: var(--moon-color);
+    color: var(--main-green);
+}
+
+.moony {
+    position: relative;
+    bottom: 15px;
+    right: 15px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    max-width: 300px;
+    border-radius: 20px;
+    margin: 20px 10px;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--main-green);
+    color: var(--main-white);
+}
+  
+.price {
+    color: grey;
+    font-size: 22px;
+}
+  
+.card button {
+    border: none;
+    outline: 0;
+    margin-top: 10px;
+    padding: 20px;
+    color: var(--main-green);
+    background-color: var(--main-white);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0px 0px 20px 20px;
+}
+  
+.card button:hover {
+    opacity: 0.7;
+
+}
+
+.card img {
+    margin-top: 20px;
+}
+
+.card h1 {
+    font-size: 2.5vh;
+    font-weight: 300;
+}
+
+.about img {
+    float: left;
+    position: relative;
+    right: 100px;
+}
+
+.icons {
+    display:inline-flex;
+    left: 50%;
+    list-style-type: none;
+}
+
+.icons > li {
+    border: 3px solid var(--moon-color);
+    border-radius: 50%;
+    color: var(--moon-color);
+    background-color: var(--main-green);
+    font-size: 2vh;
+    padding: 12px 16px;
+    margin: 15px;
+}
+
+.icon:hover {
+    color: var(--main-green);
+    background-color: var(--moon-color);
 }
