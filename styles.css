@@ -140,8 +140,6 @@ body.night .hero-content {
 
 .hero-content h1 {
     font-size: 3em;
-    position: relative;
-    bottom: 100px;
 }
 
 .hero-content span {
@@ -178,7 +176,7 @@ body.night .hero-content {
 
 .cloud-2 {
     top: 7%;
-    left: -60%;
+    left: -65%;
     animation-delay: 2s;
 }
 
@@ -463,6 +461,7 @@ body.night .cursor-dot {
     border: 1px solid var(--moon-color);
     border-radius: 26px;
     padding: 12px;
+    text-decoration: none;
 }
 
 .button-about:hover {
@@ -532,7 +531,7 @@ body.night .cursor-dot {
     list-style-type: none;
 }
 
-.icons > li {
+.icon {
     border: 3px solid var(--moon-color);
     border-radius: 50%;
     color: var(--moon-color);
