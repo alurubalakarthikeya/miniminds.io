@@ -18,7 +18,7 @@
 
 body {
     font-family: "Anek Devanagari", sans-serif;
-    background: linear-gradient(to top, #62cff4, #2c67f2);
+    background-color: var(--main-white);
     overflow-x: hidden;
     transition: background-color 0.5s ease;
 }
@@ -106,21 +106,15 @@ nav ul.active {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    background: url('image.png') no-repeat bottom;
-    background-size: cover;
     text-align: center;
 }
 
-.tree-1 {
-    position: relative;
-    top: 22px;
-}
-
 .hero-content {
-    color: var(--main-black);
     font-family: "Architects Daughter", sans-serif;
     font-size: 3vh;
     margin-top: 22vh;
+    position: relative;
+    z-index: 2;
 }
 
 body.night .hero-content {
@@ -129,6 +123,11 @@ body.night .hero-content {
 
 .hero-content span {
     color: var(--main-green);
+}
+
+.tree-1 {
+    position: relative;
+    top: 22px;
 }
 
 .floating-clouds {
@@ -225,6 +224,20 @@ body.night .moon {
     display: block;
 }
 
+.hehe {
+    font-family: "Architects Daughter", sans-serif;
+    font-size: 3.5vh;
+}
+
+@media (max-width: 400px) {
+    .hehe {
+        font-size: 2.5vh;
+    }
+    .logo {
+        font-size: 2.5vh;
+    }
+}
+
 @media (max-width: 700px) {
     nav ul {
         display: none;
@@ -281,22 +294,12 @@ body.night .moon {
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
     }
 
-    .hero-content {
-        font-size: 3vh;
-    }
-
-    .course {
-        height: 100px;
-        width: 100px;
-        background-color: var(--main-green);
-        border-radius: 10px;
-        display: inline-block;
-        margin: 15px;
-        text-align: center;
-    }
-
     .about {
         padding: 55px;
+    }
+
+    .hehe {
+        font-size: 2.3vh;
     }
 }
 
@@ -404,6 +407,7 @@ body.night .cursor-dot {
     border-top: 3px solid var(--moon-color);
     background-color: var(--night-sky);
     color: var(--main-white);
+    text-align: justify;
 }
 
 .course {
@@ -425,18 +429,11 @@ body.night .cursor-dot {
     background-color: var(--main-dark);
 }
 
-.imagee {
-    font-size: 80px;
-    margin: 10px 0px;
-}
-
-.imag {
-    font-size: 72px;
-}
-
 .heading {
     font-size: 3.5vh;
-    padding-bottom: 10px;
+    clear: both;
+    display: inline-block;
+    margin-bottom: 10px; 
 }
 
 .button-about {
@@ -454,56 +451,7 @@ body.night .cursor-dot {
     color: var(--main-green);
 }
 
-.moony {
-    position: relative;
-    bottom: 15px;
-    right: 15px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
-    max-width: 300px;
-    border-radius: 20px;
-    margin: 20px 10px;
-    text-align: center;
-    display: inline-block;
-    background-color: var(--main-green);
-    color: var(--main-white);
-}
-  
-.price {
-    color: grey;
-    font-size: 22px;
-}
-  
-.card button {
-    border: none;
-    outline: 0;
-    margin-top: 10px;
-    padding: 20px;
-    color: var(--main-green);
-    background-color: var(--main-white);
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-    border-radius: 0px 0px 20px 20px;
-}
-  
-.card button:hover {
-    opacity: 0.7;
-}
-
-.card img {
-    margin-top: 20px;
-}
-
-.card h1 {
-    font-size: 2.5vh;
-    font-weight: 300;
-}
-
-.about img {
+.about > img {
     float: right;
     overflow: hidden;
     margin: 0;
@@ -514,32 +462,25 @@ ul.icons {
     display: inline-flex;
     left: 50%;
     list-style-type: none;
+    text-decoration: none;
+    z-index: 10;
 }
 
-.icons > li {
-    border: 3px solid var(--moon-color);
-    border-radius: 50%;
-    text-decoration: none;
-    color: var(--moon-color);
+.icons > li > a> i {
     background-color: var(--main-green);
-    font-size: 2.2vh;
-    padding: 12px 16px;
-    margin: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: var(--moon-color);
+    padding: 15px;
+    font-size: 2vh;
+    border: 2px solid var(--moon-color);
+    margin: 10px;
+    border-radius: 50%;
 }
 
-.icons > a {
-    text-decoration: none;
-}
-
-.icons>li:hover {
-    color: var(--main-green);
+ul.icons li i:hover {
     background-color: var(--moon-color);
-    cursor: pointer;
+    color: var(--main-green);
 }
 
-a:visited {
-    color: inherit; /* or specify the same color as unvisited links to remove the purple color */
+.aboutus {
+    background-color: var(--main-dark);
 }
