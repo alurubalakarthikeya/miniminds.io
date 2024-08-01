@@ -32,7 +32,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: var(--main-blue);
+    background-color: rgba(44,62,80,0.2);
     border-bottom: 2px solid var(--main-white);
     transition: background-color 0.5s ease;
     position: sticky;
@@ -41,7 +41,7 @@ header {
 }
 
 body.night header {
-    background-color: var(--night-sky);
+    background-color: rgba(44,62,80,0.85);
 }
 
 .logo {
@@ -105,20 +105,21 @@ nav ul.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 55vh;
     text-align: center;
 }
 
 .hero-content {
     font-family: "Architects Daughter", sans-serif;
     font-size: 3vh;
-    margin-top: 22vh;
+    margin-top: 25vh;
     position: relative;
     z-index: 2;
 }
 
 body.night .hero-content {
     color: var(--moon-color);
+    background-color: rgba(44,62,80,0.9);
 }
 
 .hero-content span {
@@ -236,12 +237,19 @@ body.night .moon {
     .logo {
         font-size: 2.5vh;
     }
+    .box {
+        height: 200px;
+        width: 200px;
+    }
+    .about > img {
+        height: 140px;
+    }
 }
 
 @media (max-width: 700px) {
     nav ul {
         display: none;
-        background-color: var(--moon-color);
+        background-color: rgba(44,62,80,0.9);
         text-align: center;
         color: var(--night-sky);
         border-radius: 20px;
@@ -267,18 +275,12 @@ body.night .moon {
         display: block;
     }
 
-    nav.active ul li {
-        display: block;
-        background-color: var(--moon-color);
-        color: var(--night-sky);
-        margin-top: 10px;
-    }
 
     nav ul li a {
         display: block;
         text-decoration: none;
         color: var(--main-blue);
-        background-color: var(--moon-color);
+        background-color: rgba(44,62,80,0.9);
         transition: 0.5s ease-in-out;
         position: relative;
         border-radius: 0;
@@ -309,7 +311,7 @@ body.night .sky {
     height: 100vh;
     background: linear-gradient(to bottom, #1b2735, #2c3e50, #34495e);
     z-index: -1;
-    top: 20px;
+    top: 0;
     left: 0;
     transition: 2s ease-in-out;
 }
@@ -382,7 +384,13 @@ body.night nav ul {
 .about {
     background-color: var(--main-green);
     color: var(--main-white);
-    padding: 60px;
+    padding: 50px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 50px;
     margin: 0;
     border-top: 4px solid var(--main-white);
     text-align: justify;
@@ -466,6 +474,12 @@ ul.icons {
     z-index: 10;
 }
 
+.course-list {
+    background-color: rgba(0,128,0,0.4);
+    display: block;
+    border-top: 3px solid var(--moon-color);
+}
+
 .icons > li > a> i {
     background-color: var(--main-green);
     color: var(--moon-color);
@@ -492,17 +506,39 @@ ul.icons li i:visited {
 .contact {
     background-color: var(--main-black);
     color: var(--moon-color);
-    padding: 60px;
+    width: 100%;
     border-top: 3px solid var(--moon-color);
     text-align: justify;
 }
 
 .box {
-    height: 250px;
-    width: 250px;
-    background-color: var(--main-dark);
+    height: 220px;
+    width: 220px;
+    background-color: var(--night-sky);
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
     border-radius: 15px ;
-    margin: 10px;
+    margin: 20px 10px;
     display: inline-block;
 }
+
+::-webkit-scrollbar {
+    width: 12px !important;
+ }
+
+::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+   -webkit-border-radius: 10px !important;
+   border-radius: 10px !important;
+ }
+
+ ::-webkit-scrollbar-thumb {
+   -webkit-border-radius: 10px !important;
+   border-radius: 10px !important;
+   background: #41617D !important; 
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
+ }
+
+ ::-webkit-scrollbar-thumb:window-inactive {
+   background: #41617D !important; 
+ }
+

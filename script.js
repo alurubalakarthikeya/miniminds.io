@@ -11,10 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Menu toggle
-    menuIcon.addEventListener('click', () => {
+     // Toggle the menu visibility when the menu icon is clicked
+     menuIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevents the body click event from firing immediately
         menuItems.classList.toggle('active');
-    });
-
+      });
+  
+      // Collapse the menu when clicking anywhere on the body
+      document.addEventListener('click', (event) => {
+        // Check if the menu is currently active
+        if (menuItems.classList.contains('active')) {
+          menuItems.classList.remove('active');
+        }
+      });
+  
+      // Prevent the body click event from firing when clicking inside the menu
+      menuItems.addEventListener('click', (event) => {
+        event.stopPropagation();
+      });
     // Cursor effect
     const cursorDot = document.querySelector("[data-cursor-dot]");
     const cursorOutline = document.querySelector("[data-cursor-outline]");
@@ -35,4 +49,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { duration: 500, fill: "forwards" });
     });
 });
-
