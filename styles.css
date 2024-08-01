@@ -504,8 +504,10 @@ body.night .cursor-dot {
 }
 
 .about img {
-    position: relative;
+    float: right;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 ul.icons {
