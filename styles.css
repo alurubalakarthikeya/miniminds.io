@@ -27,6 +27,10 @@ body.night {
     background-color: var(--night-sky);
 }
 
+body.day {
+    background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%);
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -44,8 +48,13 @@ body.night header {
     top: 0;
 }
 
+body.day header {
+    background: rgba(167,214,220,0.75);
+    top: 0;
+}
+
 .logo {
-    font-size: 3vh;
+    font-size: 2.8vh;
     font-weight: bold;
     font-family: "Architects Daughter", sans-serif;
     color: var(--main-dark);
@@ -59,8 +68,16 @@ body.night .logo {
     color: var(--moon-color);
 }
 
+body.day .logo a {
+    color: var(--main-green);
+}
+
 .logo span {
     color: var(--main-green);
+}
+
+body.day .logo span {
+    color: var(--moon-color);
 }
 
 nav {
@@ -124,6 +141,13 @@ body.night .hero-content {
     padding: 15px;
 }
 
+body.day .hero-content {
+    color: var(--moon-color);
+    background-color: rgba(108, 145, 108, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+}
+
 .hero-content span {
     color: var(--main-green);
 }
@@ -136,9 +160,15 @@ body.night .hero-content {
     font-family: "Anek Devanagari", sans-serif;
     font-size: 2vh;
 }
+
+body.day .hero-content > p {
+    color: var(--main-green);
+}
+
 .tree-1 {
     position: relative;
     top: 22.5px;
+    z-index: 1;
 }
 
 .floating-clouds {
@@ -167,12 +197,14 @@ body.night .hero-content {
     top: 3%;
     left: 2%;
     animation-delay: 0s;
+    z-index: 2;
 }
 
 .cloud-2 {
     top: 4%;
     left: -70%;
     animation-delay: 2s;
+    z-index: 2;
 }
 
 @keyframes float {
@@ -199,6 +231,7 @@ body.night .hero-content {
     left: 50%;
     transform: translateX(-50%);
     gap: 20px;
+    z-index: 1;
 }
 
 .sun, .moon {
@@ -207,6 +240,7 @@ body.night .hero-content {
     border-radius: 50%;
     cursor: pointer;
     transition: opacity 0.8s ease;
+    display: none;
 }
 
 .sun {
@@ -220,6 +254,11 @@ body.night .sun {
     display: none;
 }
 
+body.day .sun {
+    opacity: 1;
+    display: block;
+}
+
 .moon {
     display: none;
     background-color: #fff;
@@ -229,6 +268,11 @@ body.night .sun {
 body.night .moon {
     opacity: 1;
     display: block;
+}
+
+body.day .moon {
+    opacity: 0;
+    display: none;
 }
 
 #menu-items.active {
@@ -367,10 +411,19 @@ body.night .stars {
     height: 84%;
     display: block;
     background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
-    z-index: 0;
 }
 
 body.night h3 {
+    font-family: "Rammetto One";
+    text-align: center;
+    font-size: 1.75rem;
+    width: 55%;
+    margin: 5rem auto;
+    line-height: 3rem;
+    letter-spacing: 5px;
+}
+
+body.day h3 {
     font-family: "Rammetto One";
     text-align: center;
     font-size: 1.75rem;
@@ -385,13 +438,30 @@ body.night nav ul li a {
     color: var(--moon-color);
 }
 
+body.day nav ul li a {
+    background-color: var(--moon-color);
+    border-radius: 15px;
+    color: var(--main-blue);
+}
+
 body.night nav ul li a:hover {
     background-color: var(--main-green);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
 }
 
+body.night nav ul li a:hover {
+    background-color: rgba(167,214,220,0.9) ;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
+}
+
 body.night nav ul {
     background-color: var(--night-sky);
+    color: var(--moon-color);
+    margin-bottom: 10px;
+}
+
+body.day nav ul {
+    background: rgba(167,214,220,0.9);
     color: var(--moon-color);
     margin-bottom: 10px;
 }
@@ -460,6 +530,12 @@ body.night .cursor-dot {
     text-align: justify;
 }
 
+body.day .courses {
+    background-color: var(--moon-color);
+    color: var(--night-sky);
+    border-top: 3px solid var(--night-sky);
+}
+
 .course {
     height: 230px;
     width: 220px;
@@ -515,6 +591,17 @@ body.night .cursor-dot {
 .button-courses:hover {
     background-color: var(--moon-color);
     color: var(--night-sky);
+}
+
+body.day .button-courses {
+    background-color: var(--moon-color);
+    color: var(--night-sky);
+    border: 1px solid var(--night-sky);
+}
+
+.button-courses:hover {
+    background-color: var(--night-sky);
+    color: var(--moon-color);
 }
 
 .button-games {
@@ -607,6 +694,21 @@ ul.icons li i:hover {
     color: rgb(13, 139, 13);
 }
 
+body.day .icons > li > a> i {
+    background-color: var(--moon-color);
+    color: var(--main-green);
+    padding: 15px;
+    font-size: 2vh;
+    border: 2px solid var(--main-green);
+    margin: 10px;
+    border-radius: 50%;
+}
+
+body.day ul.icons li i:hover {
+    background-color: var(--main-green);
+    color: var(--moon-color);
+}
+
 ul.icons li i:visited {
     color: var(--moon-color);
 }
@@ -617,14 +719,6 @@ a:visited {
 
 .aboutus {
     background-color: var(--main-dark);
-}
-
-.contact {
-    background-color: var(--main-black);
-    color: var(--moon-color);
-    width: 100%;
-    border-top: 3px solid var(--moon-color);
-    text-align: justify;
 }
 
 .box {
@@ -681,6 +775,24 @@ a:visited {
 .sign-in:hover {
     background-color: var(--moon-color);
     color: rgb(13, 139, 13);
+}
+
+body.day .sign-in {
+    background-color: var(--moon-color);
+    color: var(--main-green);
+    border: 2px solid var(--main-green);
+    border-radius: 15px;
+    padding: 10px 110px;
+    left: 50%;
+    margin-top: 15px;
+    font-family: "Anek Devanagari", sans-serif;
+    font-size: 2vh;
+    font-weight: 400;
+}
+
+body.day .sign-in:hover {
+    background-color: var(--main-green);
+    color: var(--moon-color);
 }
 
 .img-fluid {

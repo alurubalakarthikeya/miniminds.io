@@ -1,35 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Elements
     const menuIcon = document.getElementById('menu-icon');
     const menuItems = document.getElementById('menu-items');
-    const bodyElement = document.body;
+    const bodyElement = document.getElementById('body');
 
-    // Function to toggle between day and night mode
     function toggleMode() {
-        bodyElement.classList.toggle('night');
-        bodyElement.classList.toggle('day');
-    }
-
-    // Menu toggle
-     // Toggle the menu visibility when the menu icon is clicked
+      const body = document.body;
+      const sun = document.getElementById("sun");
+      const moon = document.getElementById("moon");
+  
+      if (body.classList.contains("night")) {
+          body.classList.remove("night");
+          body.classList.add("day");
+          sun.style.display = "block";
+          moon.style.display = "none";
+      } else {
+          body.classList.remove("day");
+          body.classList.add("night");
+          sun.style.display = "none";
+          moon.style.display = "block";
+      }
+  }
+  
+  document.getElementById("sun").addEventListener("click", toggleMode);
+  document.getElementById("moon").addEventListener("click", toggleMode);
+  
      menuIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents the body click event from firing immediately
+        event.stopPropagation(); 
         menuItems.classList.toggle('active');
       });
   
-      // Collapse the menu when clicking anywhere on the body
       document.addEventListener('click', (event) => {
-        // Check if the menu is currently active
         if (menuItems.classList.contains('active')) {
           menuItems.classList.remove('active');
         }
       });
-  
-      // Prevent the body click event from firing when clicking inside the menu
+
       menuItems.addEventListener('click', (event) => {
         event.stopPropagation();
       });
-    // Cursor effect
+
     const cursorDot = document.querySelector("[data-cursor-dot]");
     const cursorOutline = document.querySelector("[data-cursor-outline]");
 
