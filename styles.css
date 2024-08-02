@@ -55,6 +55,10 @@ body.night header {
     color: var(--main-dark);
 }
 
+.logo > a {
+    text-decoration: none;
+}
+
 body.night .logo {
     color: var(--moon-color);
 }
@@ -109,7 +113,7 @@ nav ul.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55vh;
+    height: 47vh;
     text-align: center;
 }
 
@@ -170,7 +174,7 @@ body.night .hero-content {
 }
 
 .cloud-2 {
-    top: 7%;
+    top: 4%;
     left: -70%;
     animation-delay: 2s;
 }
@@ -256,7 +260,18 @@ body.night .moon {
         width: 200px;
     }
     .about > img {
-        height: 140px;
+        height: 160px;
+        left: 0;
+        float: left;
+    }
+
+    .courses > img {
+        height: 160px;
+        left: 20px;
+    }
+
+    .games > img {
+        height: 170px;
     }
 }
 
@@ -312,6 +327,21 @@ body.night .moon {
 
     .hehe {
         font-size: 2.3vh;
+    }
+
+    .about > img {
+        height: 170px;
+        left: 0;
+    }
+
+    .courses > img {
+        height: 170px;
+        left: 20px;
+    }
+
+    .games > img {
+        height: 200px;
+        left: 20px;
     }
 }
 
@@ -433,7 +463,8 @@ body.night .cursor-dot {
 }
 
 .courses {
-    padding: 60px;
+    padding: 60px 50px;
+    margin: 0;
     border-top: 3px solid var(--moon-color);
     background-color: var(--night-sky);
     color: var(--main-white);
@@ -466,6 +497,13 @@ body.night .cursor-dot {
     margin-bottom: 10px; 
 }
 
+.games-heading {
+    font-size: 3.5vh;
+    clear: both;
+    display: inline-block;
+    margin-bottom: 10px; 
+}
+
 .button-about {
     background-color: var(--main-green);
     color: var(--moon-color);
@@ -481,9 +519,61 @@ body.night .cursor-dot {
     color: var(--main-green);
 }
 
+.button-courses {
+    background-color: var(--night-sky);
+    color: var(--moon-color);
+    transition: 0.4s;
+    border: 1px solid var(--moon-color);
+    border-radius: 26px;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.button-courses:hover {
+    background-color: var(--moon-color);
+    color: var(--night-sky);
+}
+
+.button-games {
+    background-color: inherit;
+    color: var(--moon-color);
+    transition: 0.4s;
+    border: 1px solid var(--moon-color);
+    border-radius: 26px;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.button-games:hover {
+    background-color: var(--moon-color);
+    color: #3299cc;
+}
+
 .about > img {
     position: relative;
-    right: 50%;
+    overflow-y: auto;
+    float: right;
+}
+
+.games > img {
+    position: relative;
+    overflow-y: auto;
+    float: right;
+}
+
+.courses > img {
+    position: relative;
+    overflow-y: auto;
+    float: right;
+}
+
+.games {
+    background: linear-gradient(120deg, #3299cc, #333333) ;
+    border-top: 2px solid var(--moon-color);
+    color: var(--moon-color);
+    margin: 0;
+    text-align: justify;
+    padding: 50px 60px;
 }
 
 ul.icons {
@@ -516,6 +606,10 @@ ul.icons li i:hover {
 }
 
 ul.icons li i:visited {
+    color: var(--moon-color);
+}
+
+a:visited {
     color: var(--moon-color);
 }
 
@@ -554,12 +648,12 @@ ul.icons li i:visited {
  ::-webkit-scrollbar-thumb {
    -webkit-border-radius: 10px !important;
    border-radius: 10px !important;
-   background: #41617D !important; 
+   background:var(--main-green) !important; 
    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
  }
 
  ::-webkit-scrollbar-thumb:window-inactive {
-   background: #41617D !important; 
+   background: var(--main-green)!important; 
  }
 
 .sign-in {
