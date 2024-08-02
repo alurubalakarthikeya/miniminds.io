@@ -284,6 +284,14 @@ body.day .moon {
     font-size: 2.5vh;
 }
 
+body.day .hehe {
+    color: var(--main-green);
+}
+
+body.day .hehe > span {
+    color: var(--moon-color);
+}
+
 @media (max-width: 400px) {
     .hehe {
         font-size: 2.5vh;
@@ -660,6 +668,20 @@ body.day .button-courses {
     padding: 50px 60px;    
 }
 
+body.day .course-list {
+    background: white;
+    border-top: var(--main-green);
+    color: var(--moon-color);
+    margin: 0;
+    text-align: justify;
+    padding: 50px 60px;    
+}
+
+body.day .course-list > h2 {
+    color: var(--main-green);
+    border-bottom: 2px solid var(--main-green);
+}
+
 .contact {
     background: var(--main-black) ;
     border-top: 3px solid var(--moon-color);
@@ -667,6 +689,12 @@ body.day .button-courses {
     margin: 0;
     text-align: justify;
     padding: 50px 60px;    
+}
+
+body.day .contact {
+    background-color: var(--main-black);
+    color: var(--main-green);
+    border-top: 3px solid var(--main-black);
 }
 
 ul.icons {
@@ -729,18 +757,27 @@ a:visited {
 .box {
     height: 220px;
     width: 220px;
+    margin: 20px;
     display: inline-block;
     justify-content: center;
     align-items: center;
     background-color: green;
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
     border: 2px solid white;
-    border-radius: 15px ;
-    margin: 20px 10px;
+    border-radius: 15px ; 
+    font-size: 10vh;
+    text-align: center;
+    padding-top: 40px;
 }
 
 .box:hover {
-    opacity: 0.7;
+    opacity: 0.8;
+}
+
+body.day .box {
+    background-color: var(--main-white);
+    border: 3px solid var(--main-green);
+    color: var(--main-green);
 }
 
 ::-webkit-scrollbar {
