@@ -633,11 +633,15 @@ a:visited {
     display: inline-block;
     justify-content: center;
     align-items: center;
-    background-color: #1D1E22;
+    background-color: green;
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
     border: 2px solid white;
     border-radius: 15px ;
     margin: 20px 10px;
+}
+
+.box:hover {
+    opacity: 0.7;
 }
 
 ::-webkit-scrollbar {
