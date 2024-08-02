@@ -239,7 +239,7 @@ body.day .hero-content > p {
     height: 85px;
     border-radius: 50%;
     cursor: pointer;
-    transition: opacity 0.8s ease;
+    transition: opacity 1s ease;
     display: none;
 }
 
@@ -257,6 +257,11 @@ body.night .sun {
 body.day .sun {
     opacity: 1;
     display: block;
+}
+
+[data-cursor-dot],
+[data-cursor-outline] {
+  transition: transform 0.5s ease;
 }
 
 .moon {
@@ -358,10 +363,8 @@ body.day .hehe > span {
         display: block;
         text-decoration: none;
         color: var(--main-blue);
-        background-color: rgba(44,62,80,0.9);
         transition: 0.5s ease-in-out;
         position: relative;
-        border-radius: 0;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         margin: 0px 0px 20px 0px;
         width: 100%;
@@ -403,10 +406,6 @@ body.night .sky {
     top: 0;
     left: 0;
     transition: 2s ease-in-out;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 body.night .stars {
@@ -448,7 +447,7 @@ body.night nav ul li a {
 
 body.day nav ul li a {
     background-color: var(--moon-color);
-    border-radius: 15px;
+    border-radius: 25px;
     color: var(--main-blue);
 }
 
@@ -464,14 +463,10 @@ body.day nav ul li a:hover {
 }
 
 body.night nav ul {
-    background-color: var(--night-sky);
-    color: var(--moon-color);
     margin-bottom: 10px;
 }
 
 body.day nav ul {
-    background: rgba(167,214,220,0.9);
-    color: var(--moon-color);
     margin-bottom: 10px;
 }
 
