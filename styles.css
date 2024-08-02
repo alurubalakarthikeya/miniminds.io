@@ -25,17 +25,13 @@ body {
 
 body.night {
     background-color: var(--night-sky);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding: 16px;
     background-color: rgba(44,62,80,0.2);
     border-bottom: 2px solid var(--main-white);
     position: sticky;
@@ -129,13 +125,21 @@ body.night .hero-content {
     color: var(--moon-color);
     background-color: rgba(184, 192, 184, 0.4);
     border-radius: 20px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .hero-content span {
     color: var(--main-green);
 }
 
+.hero-content > h2 {
+    margin-top: 10px;
+}
+
+.hero-content > p {
+    font-family: "Anek Devanagari", sans-serif;
+    font-size: 2vh;
+}
 .tree-1 {
     position: relative;
     top: 22px;
@@ -149,10 +153,6 @@ body.night .hero-content {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .cloud {
@@ -233,10 +233,6 @@ body.night .sun {
 body.night .moon {
     opacity: 1;
     display: block;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #menu-items.active {
@@ -261,17 +257,22 @@ body.night .moon {
     }
     .about > img {
         height: 160px;
-        left: 0;
+        left: 40px;
         float: left;
     }
 
     .courses > img {
         height: 160px;
-        left: 20px;
+        left: 40px;
     }
 
     .games > img {
         height: 170px;
+        left: 40px;
+    }
+
+    .sign-in {
+        margin-top: 10px;
     }
 }
 
@@ -371,10 +372,6 @@ body.night .stars {
     display: block;
     background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
     z-index: 0;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 body.night h3 {
@@ -385,10 +382,6 @@ body.night h3 {
     margin: 5rem auto;
     line-height: 3rem;
     letter-spacing: 5px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 body.night nav ul li a {
@@ -582,6 +575,7 @@ ul.icons {
     list-style-type: none;
     text-decoration: none;
     z-index: 10;
+    margin-top: 10px;
 }
 
 .course-list {
