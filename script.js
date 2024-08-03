@@ -74,7 +74,15 @@ document.addEventListener("DOMContentLoaded", function() {
     threshold: 0.1 // Adjust this value as needed
   };
 
-  const observerCallback = (entries, observer) => {
+  let debounceTimer;
+  const debounce = (callback, delay) => {
+    return (...args) => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => callback.apply(this, args), delay);
+    };
+  };
+
+  const observerCallback = debounce((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         if (entry.target.classList.contains('fade-in-up-target')) {
@@ -87,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.unobserve(entry.target); // Optionally unobserve the element after the animation
       }
     });
-  };
+  }, 100); // Adjust the debounce delay as needed
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
 
