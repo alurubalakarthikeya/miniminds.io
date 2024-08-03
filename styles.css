@@ -237,6 +237,51 @@ body.day .hero-content > p {
     }
 }
 
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    99% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    99% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+  } 
+
+  @keyframes fadeInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    99% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+  } 
+
+  .fadeInUp-animation {
+    animation: 2s fadeInUp;
+  }
+
+  .fadeInLeft-animation {
+    animation: 2s fadeInLeft;
+  }
+
+  .fadeInRight-animation {
+    animation: 2s fadeInRight;
+  }
+
 .sun-moon-container {
     display: flex;
     justify-content: center;

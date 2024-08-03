@@ -62,3 +62,36 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.cursor = 'none';
       
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const fadeInUpTargets = document.querySelectorAll('.fade-in-up-target');
+  const fadeInLeftTargets = document.querySelectorAll('.fade-in-left-target');
+  const fadeInRightTargets = document.querySelectorAll('.fade-in-right-target');
+
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.1 // Adjust this value as needed
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('fade-in-up-target')) {
+          entry.target.classList.add('fadeInUp-animation');
+        } else if (entry.target.classList.contains('fade-in-left-target')) {
+          entry.target.classList.add('fadeInLeft-animation');
+        } else if (entry.target.classList.contains('fade-in-right-target')) {
+          entry.target.classList.add('fadeInRight-animation');
+        }
+        observer.unobserve(entry.target); // Optionally unobserve the element after the animation
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  [...fadeInUpTargets, ...fadeInLeftTargets, ...fadeInRightTargets].forEach(target => {
+    observer.observe(target);
+  });
+});
