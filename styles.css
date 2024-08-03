@@ -242,20 +242,23 @@ body.day .hero-content > p {
       transform: translateY(100%);
       opacity: 0;
     }
-    99% {
+    100% {
       transform: translateY(0%);
       opacity: 1;
+      filter: blur(0);
     }
   }
+  
 
 @keyframes fadeInLeft {
     0% {
         transform: translateX(-100%);
         opacity: 0;
     }
-    99% {
+    100% {
         transform: translateX(0%);
         opacity: 1;
+        filter: blur(0);
     }
   } 
 
@@ -264,9 +267,10 @@ body.day .hero-content > p {
         transform: translateX(100%);
         opacity: 0;
     }
-    99% {
+    100% {
         transform: translateX(0%);
         opacity: 1;
+        filter: blur(0);
     }
   } 
 
@@ -281,6 +285,26 @@ body.day .hero-content > p {
   .fadeInRight-animation {
     animation: 2s fadeInRight;
   }
+
+  /* No need for custom keyframes with GSAP */
+.fade-in-up-target,
+.fade-in-left-target,
+.fade-in-right-target {
+  opacity: 0; /* Start hidden */
+}
+
+/* Optional: Set initial position */
+.fade-in-up-target {
+  transform: translateY(100%);
+}
+.fade-in-left-target {
+  transform: translateX(-100%);
+}
+.fade-in-right-target {
+  transform: translateX(100%);
+}
+
+  
 
 .sun-moon-container {
     display: flex;

@@ -64,42 +64,58 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  const fadeInUpTargets = document.querySelectorAll('.fade-in-up-target');
-  const fadeInLeftTargets = document.querySelectorAll('.fade-in-left-target');
-  const fadeInRightTargets = document.querySelectorAll('.fade-in-right-target');
+  gsap.registerPlugin(ScrollTrigger);
 
-  const observerOptions = {
-    root: null, // Use the viewport as the root
-    rootMargin: '0px',
-    threshold: 0.1 // Adjust this value as needed
-  };
-
-  let debounceTimer;
-  const debounce = (callback, delay) => {
-    return (...args) => {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => callback.apply(this, args), delay);
-    };
-  };
-
-  const observerCallback = debounce((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.target.classList.contains('fade-in-up-target')) {
-          entry.target.classList.add('fadeInUp-animation');
-        } else if (entry.target.classList.contains('fade-in-left-target')) {
-          entry.target.classList.add('fadeInLeft-animation');
-        } else if (entry.target.classList.contains('fade-in-right-target')) {
-          entry.target.classList.add('fadeInRight-animation');
+  gsap.utils.toArray('.fade-in-up-target').forEach(el => {
+    gsap.fromTo(el, 
+      { opacity: 0, y: 100 }, // Start state
+      {
+        opacity: 1,
+        y: 0, // End state
+        duration: 2,
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%', // Animation starts when element is 80% from the top of the viewport
+          end: 'bottom 20%', // Animation ends when element is 20% from the bottom of the viewport
+          scrub: true // Smoothly animates while scrolling
         }
-        observer.unobserve(entry.target); // Optionally unobserve the element after the animation
       }
-    });
-  }, 100); // Adjust the debounce delay as needed
+    );
+  });
 
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  gsap.utils.toArray('.fade-in-left-target').forEach(el => {
+    gsap.fromTo(el, 
+      { opacity: 0, x: -100 }, // Start state
+      {
+        opacity: 1,
+        x: 0, // End state
+        duration: 2,
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          scrub: true
+        }
+      }
+    );
+  });
 
-  [...fadeInUpTargets, ...fadeInLeftTargets, ...fadeInRightTargets].forEach(target => {
-    observer.observe(target);
+  gsap.utils.toArray('.fade-in-right-target').forEach(el => {
+    gsap.fromTo(el, 
+      { opacity: 0, x: 100 }, // Start state
+      {
+        opacity: 1,
+        x: 0, // End state
+        duration: 2,
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          scrub: true
+        }
+      }
+    );
   });
 });
+
+
