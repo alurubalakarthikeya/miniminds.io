@@ -348,7 +348,7 @@ body.day .hehe > span {
     }
 
     body.day nav ul {
-        background-color: rgba(167,214,220,0.75);
+        background-color: var(--main-blue);
         display: none;
         text-align: center;
         color: var(--night-sky);
