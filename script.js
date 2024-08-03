@@ -39,22 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
         event.stopPropagation();
       });
 
-    const cursorDot = document.querySelector("[data-cursor-dot]");
-    const cursorOutline = document.querySelector("[data-cursor-outline]");
-
-    window.addEventListener("mousemove", (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        cursorOutline.style.left = `${posX}px`;
-        cursorOutline.style.top = `${posY}px`;
-
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
+      const cursorDot = document.querySelector("[data-cursor-dot]");
+      const cursorOutline = document.querySelector("[data-cursor-outline]");
+      
+      window.addEventListener("mousemove", (e) => {
+          const posX = e.clientX;
+          const posY = e.clientY;
+      
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+      
+          cursorOutline.style.left = `${posX}px`; // Adjust position to center outline around dot
+          cursorOutline.style.top = `${posY}px`;
+      
+          cursorOutline.animate({
+              left: `${posX}px`,
+              top: `${posY}px`
+          }, { duration: 500, fill: "forwards" });
+      });
+      
+      // Hide the default cursor
+      document.body.style.cursor = 'none';
+      
 });
