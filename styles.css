@@ -129,7 +129,7 @@ nav ul.active {
 .hero-content {
     font-family: "Architects Daughter", sans-serif;
     font-size: 3vh;
-    margin-top: 34vh;
+    margin-top: 35vh;
     position: relative;
     z-index: 2;
 }
@@ -310,18 +310,15 @@ body.day .hehe > span {
     }
     .about > img {
         height: 160px;
-        left: 80px;
         float: left;
     }
 
     .courses > img {
         height: 160px;
-        left: 80px;
     }
 
     .games > img {
         height: 170px;
-        left: 80px;
     }
 
     .sign-in {
@@ -403,7 +400,7 @@ body.day .hehe > span {
 
     .about > img {
         height: 170px;
-        left: 0;
+        left: 20px;
     }
 
     .courses > img {
@@ -412,8 +409,12 @@ body.day .hehe > span {
     }
 
     .games > img {
-        height: 200px;
+        height: 180px;
         left: 20px;
+    }
+
+    header {
+        padding: 14px;
     }
 }
 
@@ -628,7 +629,7 @@ body.day .button-courses {
     border: 1px solid var(--night-sky);
 }
 
-.button-courses:hover {
+body.day .button-courses:hover {
     background-color: var(--night-sky);
     color: var(--moon-color);
 }
@@ -767,7 +768,7 @@ a:visited {
 }
 
 .aboutus {
-    background-color: var(--main-dark);
+    background-color: var(--main-pink);
 }
 
 .box {
