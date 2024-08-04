@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
-
 </head>
 <body class="night">
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
+  <!--Cursor dot container-->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+  <!--Cursor dot container-->
+    <!--Navigation Bar Code Starts-->
     <header>
         <div class="logo"><a href="#hero">Mini <span>Minds</span></a></div>
         <nav>
@@ -40,10 +42,14 @@
             </ul>
         </nav>
     </header>
+    <!--Navigation Bar Code ends-->
+    <!--Sun and Moon containers-->
     <div class="sun-moon-container">
         <div id="sun" class="sun" onclick="toggleMode()"></div>
         <div id="moon" class="moon" onclick="toggleMode()"></div>
     </div>
+    <!--Sun and Moon containers-->
+    <!--Home Page Starts-->
     <div id="hero" class="hero">
         <div class="hero-content fadeInUp-animation">
             <h2 class="hehe fadeInUp-animation">Where Learning is <span>made practical</span></h2>
@@ -64,13 +70,19 @@
             <button class="sign-in">Sign in</button>
             <p>no account? <a href="">Sign up</a></p>
         </div>
-      <div class="floating-clouds">
-          <div class="cloud cloud-1 "><img src="images/cloudy.png" alt="Cloud"></div>
-          <div class="cloud cloud-2 "><img src="images/cloudy.png" alt="Cloud"></div>
-      </div>
+        <!--Cloud resource-->
+        <div class="floating-clouds">
+            <div class="cloud cloud-1 "><img src="images/cloudy.png" alt="Cloud"></div>
+            <div class="cloud cloud-2 "><img src="images/cloudy.png" alt="Cloud"></div>
+        </div>
+        <!--Cloud resource end-->
     </div>
+    <!--Home Page Ends-->
+    <!--Tree resource-->
     <img class="tree-1" src="images/tree.png" alt="Tree" width="200px">
     <img class="stone" src="images/rock.png" alt="Stone" width="70px">
+    <!--Tree resource end-->
+    <!--About section Starts-->
     <div id="about" class="about">
         <h2 class="heading">Why Us?</h2>
         <img class="fade-in-right-target" src="images/about.png" alt="cartoon">
@@ -79,6 +91,8 @@
           <a class="button-about" href="about.html" target="_blank">Know More</a>
       </div>
     </div>
+    <!--About section Ends-->
+    <!--Courses section Starts-->
     <div id="courses" class="courses space">
         <h2 class="heading">What do we do?</h2>
         <img class="fade-in-right-target" src="images/our courses.png" alt="cartoon">
@@ -87,6 +101,8 @@
           <a class="button-courses" href="courses.html" target="_blank">Explore courses</a>
         </div>
     </div>
+    <!--Courses section Ends-->
+    <!--Games section Starts-->
     <div class="games" id="games">
       <h2 class="heading">Our Edu-Games</h2>
       <img class="fade-in-right-target" src="images/games.png" alt="cartoon"><br>
@@ -95,6 +111,8 @@
         <a class="button-games" href="courses.html" target="_blank">Coming soon!!</a>
       </div>
     </div>
+    <!--Games section Ends-->
+    <!--Course list section Starts-->
     <div id="course-list" class="course-list">
       <h2 class="heading">Our Courses</h2><br>
       <div class="box fade-in-left-target"></div>
@@ -102,6 +120,8 @@
       <div class="box fade-in-left-target"></div>
       <div class="box fade-in-right-target"></div>
     </div>
+    <!--Course list section Ends-->
+    <!--Contact Us section starts-->
     <footer>
       <div id="contact" class="contact">
         <h2 class="heading">Contact Us</h2>
@@ -125,8 +145,9 @@
         </ul><br></div>
       </div>
     </footer>
+    <!--Contact Us section Ends-->
+    <!--classes for special effect at night -->
     <div class="sky"></div>
     <div class="stars"></div>
+    <!--classes for special effect at night -->
     <script src="script.js"></script>
-</body>
-</html>
