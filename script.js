@@ -159,4 +159,10 @@ function signUp() {
   `;
 }
 
-
+  document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
+      const loader = document.getElementById('pulse-wrapper');
+      loader.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+  });

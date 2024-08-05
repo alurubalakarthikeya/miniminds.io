@@ -1,38 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About | Mini Minds</title>
-        <link rel="icon" type="image" href="images/miniminds.png">
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    </head>
-    <body class="night">
-        <div class="cursor-dot" data-cursor-dot></div>
-        <div class="cursor-outline" data-cursor-outline></div>
-        <header>
-            <div class="logo"><a href="index.html">Mini <span>Minds</span></a></div>
-            <nav>
-                <div id="menu-icon" class="menu-icon">&#9776;</div>
-                <ul id="menu-items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="index.html">Courses</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="aboutus">
-            <h2 class="heading">About Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis porro, error ad eveniet, placeat sequi blanditiis aliquid sapiente rerum ab quo autem nobis iste eligendi, iusto quae consequatur adipisci suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi nihil doloremque, ipsa cum perferendis. Doloremque quae qui in laudantium accusantium eum itaque minus, asperiores ullam officiis inventore ipsa labore?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, beatae. Nam voluptas ab debitis blanditiis deserunt, quasi perferendis temporibus ad distinctio eum aperiam, vero dolore beatae odio iure adipisci ducimus?lorm
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aperiam nesciunt mollitia numquam assumenda? Quia, recusandae corrupti repellat, hic quod atque amet animi ducimus eveniet beatae, delectus quidem inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perspiciatis nam dignissimos. Reiciendis ea enim, architecto beatae at rem vel quae voluptates, a eius officia consectetur sequi dolorum. Eligendi, voluptatibus?</Illo>
-            </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mini Minds</title>
+    <link rel="icon" type="image" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="night">
+  <!--Cursor dot container-->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+  <!--Cursor dot container-->
+  <!--Loader animation-->
+  <div id="pulse-wrapper">
+    <div id="pulse">
+        <span></span>
+        <span></span>
+    </div>
+  </div>
+  <!--End of loader-->
+    <!--Navigation Bar Code Starts-->
+    <header>
+        <div class="logo"><a href="#hero">Mini <span>Minds</span></a></div>
+        <nav>
+            <div id="menu-icon" class="menu-icon">&#9776;</div>
+            <ul id="menu-items">
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#courses">Courses</a>
+                </li>
+                <li>
+                  <a href="#games">Games</a>
+                </li>
+                <li>
+                  <a href="#stories">Stories</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--Navigation Bar Code ends-->
+    <!--Courses section Starts-->
+    <div id="courses" class="courses space">
+        <h2 class="heading">What do we do?</h2>
+        <img class="fade-in-right-target" src="images/our courses.png" alt="cartoon">
+        <div class="space fade-in-left-target">
+          <p>Interactive Stories: Our engaging stories help improve reading skills and ignite a imagination skills. According to Science, reading Sci-fi stories can improve your Analytical and Imagination skills. Each story is crafted to be entertaining and educational. Practical Learning: We believe in making education practical. Our content helps kids connect what they learn with real-world experiences, making learning meaningful. At Mini Minds, we are dedicated to creating a space where kids can learn, play, and grow</p><br><br>
+          <a class="button-courses" href="courses.html" target="_blank">Explore courses</a>
         </div>
-        <script src="script.js"></script>
-    </body>
-</html>
+    </div>
+    <!--Courses section Ends-->
+    <!--Course list section Starts-->
+    <div id="course-list" class="course-list">
+      <h2 class="heading">Our Courses</h2><br>
+      <div class="box fade-in-left-target"></div>
+      <div class="box fade-in-right-target"></div>
+      <div class="box fade-in-left-target"></div>
+      <div class="box fade-in-right-target"></div>
+      <div class="box fade-in-left-target"></div>
+      <div class="box fade-in-right-target"></div>
+    </div>
+    <!--Course list section Ends-->
+    <!--Contact Us section starts-->
+    <footer>
+      <div class="footer-container">
+          <div class="footer-brand contact">
+              <a>Mini <span>Minds</span></a>
+          </div>
+          <div class="footer-section" id="contact">
+              <h2 class="heading">Contact Us</h2>
+              <div>
+                  <p><strong>Address:</strong><br>Nellore, Andhra Pradesh, India</p>
+                  <p><strong>Contact:</strong><br>0123456789, 0123456789</p>
+              </div>
+              <div class="social-links">
+                  <p><strong>Social Links: </strong></p>
+                  <ul>
+                      <li><a class="icon" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                      <li><a class="icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                      <li><a class="icon" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                      <li><a class="icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="footer-section">
+              <h2 class="heading">Quick Links</h2>
+              <ul class="quick-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="stories.html">Stories</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-section"><p>&copy; 2024 Mini Minds. All rights reserved.</p></div>
+      </div>
+  </footer>
+    <!--Contact Us section Ends-->
+    <script src="script.js"></script>

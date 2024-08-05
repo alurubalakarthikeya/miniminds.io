@@ -68,7 +68,6 @@ body.day header {
     font-size: 2.8vh;
     font-weight: bold;
     font-family: "Architects Daughter", sans-serif;
-    color: var(--main-dark);
 }
 
 .logo > a {
@@ -433,6 +432,13 @@ body.day .hehe > span {
         padding: 14px;
         position: sticky;
     }
+
+    .course-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto;
+    }
 }
 
 body.night .sky {
@@ -794,6 +800,7 @@ a:visited {
     border: 2px solid white;
     border-radius: 15px ; 
     margin: 20px;
+    
 }
 
 
@@ -884,11 +891,14 @@ body.day .sign-in:hover {
     padding: 12px 12px 12px 0;
     width: 100%;
     font-size: 16px;
-    color: var(--moon-color);
+    color: var(--main-white);
+    padding-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 250;
 }
 
 .form-group input:focus {
-    border-color: var(--main-green);
+    border-color: var(--main-white);
 }
 
 .form-group label {
@@ -920,9 +930,12 @@ body.day .sign-in:hover {
 }
 
 footer {
+    border-top: 3px solid var(--moon-color);
     background-color: #222;
     color: #fff;
     padding: 40px 0;
+    display: inline-block;
+    width: 100%;
 }
 
 .footer-container {
@@ -938,16 +951,17 @@ footer {
     flex: 1 1 100%;
     text-align: center;
     margin-bottom: 20px;
+    font-family: "Architects Daughter", sans-serif;
 }
 
 .footer-brand a {
     font-size: 24px;
-    color: #4CAF50;
+    color: var(--main-green);
     text-decoration: none;
 }
 
 .footer-brand a span {
-    color: #fff;
+    color: var(--moon-color);
 }
 
 .footer-section {
@@ -965,23 +979,13 @@ footer {
     margin: 10px 0;
 }
 
-.contact-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .social-links ul, .quick-links {
     list-style: none;
     padding: 0;
 }
 
-.social-links ul {
-    display: flex;
-}
-
 .social-links ul li, .quick-links li {
-    margin-right: 10px;
+    display: inline-block;
 }
 
 .social-links ul li a, .quick-links li a {
@@ -1012,12 +1016,43 @@ footer {
         flex: 1 1 100%;
         text-align: center;
     }
-
-    .contact-details {
-        flex-direction: column;
-    }
-
-    .social-links ul {
-        justify-content: center;
-    }
 }
+
+
+@keyframes pulse_animation {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8) 
+    }
+    100% { 
+        box-shadow: 0 0 0 200px rgba(254, 206, 104, 0) 
+    }
+  }
+  
+  #pulse-wrapper {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--night-sky); 
+    z-index: 9999;
+  }
+  
+  #pulse-wrapper #pulse {
+    margin: auto;
+  }
+  
+  #pulse-wrapper #pulse span {
+    position: absolute;
+    margin-top: -25px; 
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--moon-color);
+    animation: pulse_animation 1.3s infinite;
+  }
+  
+  #pulse-wrapper #pulse span:nth-child(2) {
+    animation-delay: 0.3s; 
+  }
