@@ -1,8 +1,8 @@
+/*Only Colors of the site*/
 :root {
     --main-white: #f0f0f0;
     --main-black: #1e1c1c;
     --main-blue: #a7d6dc;
-    --main-pink: #FFD1E3;
     --main-dark: #00008B;
     --main-green: #008000;
     --night-sky: #2c3e50;
@@ -20,7 +20,6 @@ body {
     font-family: "Anek Devanagari", sans-serif;
     background-color: var(--main-white);
     overflow-x: hidden;
-    transition: background-color 0.5s ease;
 }
 
 body.night {
@@ -33,7 +32,6 @@ body.day {
 
 header {
     position: sticky;
-    position: -webkit-sticky;
     top: 0;
     width: 100%;
     display: flex;
@@ -42,15 +40,16 @@ header {
     padding: 16px;
     background-color: rgba(44,62,80,0.2);
     border-bottom: 2px solid var(--main-white);
-    z-index: 100;
+    z-index: 10000;
 }
 
-body.day, body.night header {
-    position: sticky;
-}
 
 html, body {
     overflow-x: hidden;
+}
+
+body > header {
+    position: sticky;
 }
 
 body.night header {
@@ -61,6 +60,7 @@ body.night header {
 
 body.day header {
     background: rgba(167,214,220,0.75);
+    position: sticky;
     top: 0;
 }
 
@@ -217,21 +217,6 @@ body.day .hero-content > p {
     z-index: 2;
 }
 
-@keyframes bg-dynamic {
-    0% {
-        background: linear-gradient(120deg, #3299cc, #333333) ;
-    }
-    50% {
-        background: linear-gradient(120deg, #1c5f81, #332b2b) ;
-    }
-    100% {
-        background: linear-gradient(120deg, #3bbeff, #292020) ;
-    }
-    150% {
-        background: linear-gradient(120deg, #1c5f81, #332b2b) ;
-    }
-}
-
 @keyframes float {
     0% {
         transform: translateX(-80%);
@@ -245,72 +230,6 @@ body.day .hero-content > p {
         transform: translateX(300%);
         opacity: 0;
     }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translate3d(0, 40px, 0);
-        opacity: 0;
-    }
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-}
-  
-
-@keyframes fadeInLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0%);
-        opacity: 1;
-        filter: blur(0);
-    }
-  } 
-
-  @keyframes fadeInRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0%);
-        opacity: 1;
-        filter: blur(0);
-    }
-  } 
-
-  .fadeInUp-animation {
-    animation: 2s fadeInUp;
-  }
-
-  .fadeInLeft-animation {
-    animation: 2s fadeInLeft;
-  }
-
-  .fadeInRight-animation {
-    animation: 2s fadeInRight;
-  }
-
-  /* No need for custom keyframes with GSAP */
-.fade-in-up-target,
-.fade-in-left-target,
-.fade-in-right-target {
-  opacity: 0; /* Start hidden */
-}
-
-/* Optional: Set initial position */
-.fade-in-up-target {
-  transform: translateY(100%);
-}
-.fade-in-left-target {
-  transform: translateX(-100%);
-}
-.fade-in-right-target {
-  transform: translateX(100%);
 }
 
   
@@ -421,13 +340,14 @@ body.day .hehe > span {
 
     header {
         padding: 12px;
+        position: sticky;
     }
 }
 
 @media (max-width: 700px) {
     body.night nav ul {
         display: none;
-        background-color: rgba(44,62,80,0.9);
+        background-color: var(--night-sky);
         text-align: center;
         color: var(--night-sky);
         border-radius: 20px;
@@ -509,6 +429,7 @@ body.day .hehe > span {
 
     header {
         padding: 14px;
+        position: sticky;
     }
 }
 
@@ -745,24 +666,22 @@ body.day .button-courses:hover {
 
 .about > img {
     position: relative;
-    overflow-y: auto;
     float: right;
 }
 
 .games > img {
     position: relative;
-    overflow-y: auto;
     float: right;
 }
 
 .courses > img {
     position: relative;
-    overflow-y: auto;
     float: right;
 }
 
 .games {
-    animation: bg-dynamic 5s infinite linear;
+    animation: bg-dynamic 5s infinite;
+    animation-timing-function: ease-in-out;
     border-top: 3px solid var(--moon-color);
     color: var(--moon-color);
     margin: 0;
@@ -876,6 +795,7 @@ a:visited {
     border-radius: 15px ; 
 }
 
+
 .box:hover {
     opacity: 0.8;
 }
@@ -947,3 +867,23 @@ body.day .sign-in:hover {
     position: relative;
     left: 50%;
 }
+
+label {
+    font-size: 2vh;
+    margin: 0;
+}
+
+.hero-content form label {
+    margin: 5px 0;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.hero-content form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--main-green);
+}
+
+

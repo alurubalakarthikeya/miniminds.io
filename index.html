@@ -51,7 +51,7 @@
     <!--Sun and Moon containers-->
     <!--Home Page Starts-->
     <div id="hero" class="hero">
-        <div class="hero-content fadeInUp-animation">
+        <div id="hero-content" class="hero-content fadeInUp-animation">
             <h2 class="hehe fadeInUp-animation">Where Learning is <span>made practical</span></h2>
             <ul class="icons ">
               <li>
@@ -67,8 +67,8 @@
                 <a class="icon" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
               </li>
             </ul><br>
-            <button class="sign-in">Sign in</button>
-            <p>no account? <a href="">Sign up</a></p>
+            <button class="sign-in" onclick="signIn()">Sign in</button>
+            <p>no account? <a onclick="signUp()">Sign up</a></p>
         </div>
         <!--Cloud resource-->
         <div class="floating-clouds">
@@ -119,6 +119,8 @@
       <div class="box fade-in-right-target"></div>
       <div class="box fade-in-left-target"></div>
       <div class="box fade-in-right-target"></div>
+      <div class="box fade-in-left-target"></div>
+      <div class="box fade-in-right-target"></div>
     </div>
     <!--Course list section Ends-->
     <!--Contact Us section starts-->
@@ -151,3 +153,4 @@
     <div class="stars"></div>
     <!--classes for special effect at night -->
     <script src="script.js"></script>
+    

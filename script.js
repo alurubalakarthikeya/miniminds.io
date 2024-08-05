@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const menuItems = document.getElementById('menu-items');
   const bodyElement = document.getElementById('body');
-
+/*Function for Day-Night Mode*/
   function toggleMode() {
     const body = document.body;
     const sun = document.getElementById("sun");
@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         moon.style.display = "block";
     }
 }
-
 document.getElementById("sun").addEventListener("click", toggleMode);
 document.getElementById("moon").addEventListener("click", toggleMode);
-
+/*Function for Day-Night Mode*/
+/*Function for Menu bar*/
    menuIcon.addEventListener('click', (event) => {
       event.stopPropagation(); 
       menuItems.classList.toggle('active');
@@ -38,10 +38,10 @@ document.getElementById("moon").addEventListener("click", toggleMode);
     menuItems.addEventListener('click', (event) => {
       event.stopPropagation();
     });
-
+/*Function for Menu bar*/
+/*Function for Cursor*/
     const cursorDot = document.querySelector("[data-cursor-dot]");
     const cursorOutline = document.querySelector("[data-cursor-outline]");
-    
     window.addEventListener("mousemove", (e) => {
         const posX = e.clientX;
         const posY = e.clientY;
@@ -49,7 +49,7 @@ document.getElementById("moon").addEventListener("click", toggleMode);
         cursorDot.style.left = `${posX}px`;
         cursorDot.style.top = `${posY}px`;
     
-        cursorOutline.style.left = `${posX}px`; // Adjust position to center outline around dot
+        cursorOutline.style.left = `${posX}px`;
         cursorOutline.style.top = `${posY}px`;
     
         cursorOutline.animate({
@@ -57,11 +57,9 @@ document.getElementById("moon").addEventListener("click", toggleMode);
             top: `${posY}px`
         }, { duration: 500, fill: "forwards" });
     });
-    
-    // Hide the default cursor
     document.body.style.cursor = 'none';
-    
 });
+/*Function for Cursor*/
 
 document.addEventListener("DOMContentLoaded", function() {
 gsap.registerPlugin(ScrollTrigger);
@@ -117,4 +115,37 @@ gsap.utils.toArray('.fade-in-right-target').forEach(el => {
   );
 });
 });
+
+function signIn() {
+  const heroContent = document.getElementById('hero-content');
+  heroContent.innerHTML = `
+      <h4><span>Sign</span>In</h4>
+      <form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required><br>
+          <button class="sign-in" type="submit">Sign In</button>
+      </form>
+      <p>Don't have an account? <a href="#" onclick="signUp()">Sign up</a></p>
+  `;
+}
+
+function signUp() {
+  const heroContent = document.getElementById('hero-content');
+  heroContent.innerHTML = `
+      <h4><span>Sign</span>Up</h4>
+      <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required><br>
+          <button class="sign-in" type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" onclick="signIn()">Sign in</a></p>
+  `;
+}
+
 
