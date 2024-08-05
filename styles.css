@@ -141,7 +141,7 @@ nav ul.active {
     font-size: 3vh;
     margin-top: 35vh;
     position: relative;
-    z-index: 2;
+    z-index: 100;
 }
 
 body.night .hero-content {
