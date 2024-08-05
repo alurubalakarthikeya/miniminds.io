@@ -100,10 +100,9 @@ gsap.utils.toArray('.fade-in-left-target').forEach(el => {
 
 gsap.utils.toArray('.fade-in-right-target').forEach(el => {
   gsap.fromTo(el, 
-    { opacity: 0, x: 100 }, // Start state
+    { opacity: 0}, 
     {
       opacity: 1,
-      x: 0, // End state
       duration: 2,
       scrollTrigger: {
         trigger: el,
