@@ -116,15 +116,20 @@ gsap.utils.toArray('.fade-in-right-target').forEach(el => {
 });
 });
 
+
 function signIn() {
   const heroContent = document.getElementById('hero-content');
   heroContent.innerHTML = `
-      <h4><span>Sign</span>In</h4>
+      <h4>Sign <span>In</span></h4><br>
       <form>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required><br>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required><br>
+          <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Email:</label>
+          </div>
+          <div class="form-group">
+              <input type="password" id="password" name="password" required>
+              <label for="password">Password:</label>
+          </div>
           <button class="sign-in" type="submit">Sign In</button>
       </form>
       <p>Don't have an account? <a href="#" onclick="signUp()">Sign up</a></p>
@@ -134,14 +139,20 @@ function signIn() {
 function signUp() {
   const heroContent = document.getElementById('hero-content');
   heroContent.innerHTML = `
-      <h4><span>Sign</span>Up</h4>
+      <h4>Sign <span>Up</span></h4><br>
       <form>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required><br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required><br>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required><br>
+          <div class="form-group">
+              <input type="text" id="username" name="username" required>
+              <label for="username">Username:</label>
+          </div>
+          <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Email:</label>
+          </div>
+          <div class="form-group">
+              <input type="password" id="password" name="password" required>
+              <label for="password">Password:</label>
+          </div>
           <button class="sign-in" type="submit">Sign Up</button>
       </form>
       <p>Already have an account? <a href="#" onclick="signIn()">Sign in</a></p>
