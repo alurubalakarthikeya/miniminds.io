@@ -1130,3 +1130,18 @@ footer {
         justify-content: space-between;
     }
 }
+
+body p::selection {
+    background-color: black;
+    color: var(--moon-color);
+}
+
+body a::selection {
+    background-color: black;
+    color: var(--moon-color);
+}
+
+body h2::selection {
+    background-color: black;
+    color: var(--main-white);
+}
