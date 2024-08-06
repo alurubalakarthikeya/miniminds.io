@@ -61,21 +61,22 @@ document.getElementById("moon").addEventListener("click", toggleMode);
 });
 /*Function for Cursor*/
 
+/*Scroll Animation*/
 document.addEventListener("DOMContentLoaded", function() {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray('.fade-in-up-target').forEach(el => {
   gsap.fromTo(el, 
-    { opacity: 0, y: 100 }, // Start state
+    { opacity: 0, y: 100 },
     {
       opacity: 1,
-      y: 0, // End state
+      y: 0,
       duration: 2,
       scrollTrigger: {
         trigger: el,
-        start: 'top 80%', // Animation starts when element is 80% from the top of the viewport
-        end: 'bottom 20%', // Animation ends when element is 20% from the bottom of the viewport
-        scrub: true // Smoothly animates while scrolling
+        start: 'top 90%',
+        end: 'bottom 10%',
+        scrub: true
       }
     }
   );
@@ -90,8 +91,8 @@ gsap.utils.toArray('.fade-in-left-target').forEach(el => {
       duration: 2,
       scrollTrigger: {
         trigger: el,
-        start: 'top 80%',
-        end: 'bottom 20%',
+        start: 'top 90%',
+        end: 'bottom 1s0%',
         scrub: true
       }
     }
@@ -114,8 +115,9 @@ gsap.utils.toArray('.fade-in-right-target').forEach(el => {
   );
 });
 });
+/*Scroll Animation*/
 
-
+/*Sign In interface*/
 function signIn() {
   const heroContent = document.getElementById('hero-content');
   heroContent.innerHTML = `
@@ -134,7 +136,9 @@ function signIn() {
       <p>Don't have an account? <a href="#" onclick="signUp()">Sign up</a></p>
   `;
 }
+/*Sign In interface*/
 
+/*Sign Up interface*/
 function signUp() {
   const heroContent = document.getElementById('hero-content');
   heroContent.innerHTML = `
@@ -157,11 +161,14 @@ function signUp() {
       <p>Already have an account? <a href="#" onclick="signIn()">Sign in</a></p>
   `;
 }
+/*Sign Up interface*/
 
+/*Loader Animation*/
   document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
       const loader = document.getElementById('pulse-wrapper');
       loader.style.display = 'none';
-      document.body.style.overflow = 'auto'; // Restore scrolling
+      document.body.style.overflow = 'auto';
     });
   });
+/*Loader Animation*/

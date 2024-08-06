@@ -34,34 +34,43 @@
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#courses">Stories</a>
+                <a href="stories.html">Stories</a>
               </li>
               <li>
-                <a href="#games">Games</a>
+                <a href="courses.html">Games</a>
               </li>
               <li>
-                <a href="#course-list">Courses</a>
+                <a href="courses.html">Courses</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="contact.html">Contact</a>
               </li>
           </ul>
       </nav>
   </header>
   <!--Navigation Bar Code ends-->
     <!--About section Starts-->
-    <div id="about" class="about">
-        <h2 class="heading">About Us</h2>
-        <img class="fade-in-right-target" src="images/about.png" alt="cartoon">
+    <div class="about-us">
+      <h2 class="heading">About Us</h2>
+    </div>
+    <div id="about" class="about-2">
         <div class="space fade-in-up-target">
-          <p>Our mission is to help children enrich their school basics while having tons of fun. At Mini Minds, we believe learning should be practical and enjoyable, which is why we've created a special place just for kids aged 5 to 12. Our site is packed with cool games, exciting activities, and interesting stories designed to make learning fun..</p>
+          <p>We're on a mission to transform learning from a chore into an exhilarating adventure. At Mini Minds, we believe every child is a budding genius, bursting with curiosity and a thirst for knowledge. That's why we've created a vibrant digital playground where learning is disguised as fun. Imagine a world where numbers dance, words sing, and creativity soars! Our interactive games, captivating activities, and imaginative stories are crafted to ignite young minds and foster a lifelong love of learning. We're talking puzzles that perplex and delight, challenges that spark ingenuity, and tales that transport little explorers to far-off lands. Make education exciting, engaging, and effective for kids aged 5 to 12. Let's turn ordinary study time into extraordinary adventures together!</p><br>
           <strong>Why Trust Mini Minds?</strong>
-          <b>Scientifically Backed Fun:</b>
+          <ul>
+            <li>
+              <b><i>Scientifically Backed Fun:</i></b>
+              <p>Studies show that children learn best when they are engaged and enjoying themselves. Our activities are designed to be both fun and educational, helping kids retain information better. </p>
+            </li>
+            <li>
+              <b>Scientifically Backed Fun:</b>
           <p>Studies show that children learn best when they are engaged and enjoying themselves. Our activities are designed to be both fun and educational, helping kids retain information better. </p>
-          <b><i>Boosts Cognitive Skills: </i></b>
-          <p>Interactive learning can enhance problem-solving and critical thinking skills. Our games and activities are crafted to support these essential abilities.</p>
-          <b><i>Positive Learning Environment:</i></b>
-          <p>Creating a positive association with learning can foster a lifelong love of knowledge. Mini Minds is all about making education enjoyable and rewarding.</p><br><br>
+            </li>
+            <li>
+              <b><i>Positive Learning Environment:</i></b>
+          <p>Creating a positive association with learning can foster a lifelong love of knowledge. Mini Minds is all about making education enjoyable and rewarding.</p>
+            </li>
+          </ul><br><br>
           <a class="button-about" href="courses.html" target="_blank">Explore Courses</a>
       </div>
     </div>
@@ -75,12 +84,12 @@
           <div class="footer-section" id="contact">
               <h2 class="heading">Contact Us</h2>
               <div>
-                  <p><strong>Address:</strong><br>Nellore, Andhra Pradesh, India</p>
-                  <p><strong>Contact:</strong><br>0123456789, 0123456789</p>
+                  <p><strong>Address:</strong><br>India</p>
+                  <p><strong>Contact:</strong><br>0123456789</p>
               </div>
           </div>
           <div class=" footer-section social-links-div">
-            <h2 class="heading">Social Links</h2>
+            <h2 class="heading">Social</h2>
             <ul class="quick-links">
                 <li><a class="icon" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
                 <li><a class="icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
@@ -88,54 +97,19 @@
                 <li><a class="icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> FaceBook</a></li>
             </ul>
         </div>
+        <div class="links-div">
           <div class="footer-section quick-links-div">
               <h2 class="heading">Quick Links</h2>
               <ul class="quick-links">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About Us</a></li>
                   <li><a href="courses.html">Courses</a></li>
                   <li><a href="stories.html">Stories</a></li>
                   <li><a href="contact.html">Contact</a></li>
               </ul>
           </div>
+        </div>
       </div>
   </footer>
-    <!--Contact Us section Ends-->
-    <script src="script.js">
-      /*Function for Menu bar*/
-   menuIcon.addEventListener('click', (event) => {
-      event.stopPropagation(); 
-      menuItems.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-      if (menuItems.classList.contains('active')) {
-        menuItems.classList.remove('active');
-      }
-    });
-
-    menuItems.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
-/*Function for Menu bar*/
-/*Function for Cursor*/
-    const cursorDot = document.querySelector("[data-cursor-dot]");
-    const cursorOutline = document.querySelector("[data-cursor-outline]");
-    window.addEventListener("mousemove", (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-    
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-    
-        cursorOutline.style.left = `${posX}px`;
-        cursorOutline.style.top = `${posY}px`;
-    
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-    document.body.style.cursor = 'none';
-/*Function for Cursor*/
-    </script>
+  <!--Contact Us section Ends-->
+  <script src="script.js"></script>
+</body>
