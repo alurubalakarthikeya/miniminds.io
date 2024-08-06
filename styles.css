@@ -74,6 +74,10 @@ body.day header {
     text-decoration: none;
 }
 
+body a {
+    text-decoration: none;
+}
+
 body.night .logo {
     color: var(--moon-color);
 }
