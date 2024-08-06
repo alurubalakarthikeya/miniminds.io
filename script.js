@@ -119,7 +119,7 @@ gsap.utils.toArray('.fade-in-right-target').forEach(el => {
 function signIn() {
   const heroContent = document.getElementById('hero-content');
   heroContent.innerHTML = `
-      <h4>Sign <span>In</span></h4><br>
+      <h4 style="font-weight: 350; margin-bottom: 10px;">Sign <span>In</span></h4>
       <form>
           <div class="form-group">
               <input type="email" id="email" name="email" required>
@@ -138,7 +138,7 @@ function signIn() {
 function signUp() {
   const heroContent = document.getElementById('hero-content');
   heroContent.innerHTML = `
-      <h4>Sign <span>Up</span></h4><br>
+      <h4 style="font-weight: 350; margin-bottom: 10px;">Sign <span>Up</span></h4>
       <form>
           <div class="form-group">
               <input type="text" id="username" name="username" required>

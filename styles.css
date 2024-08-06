@@ -439,6 +439,10 @@ body.day .hehe > span {
         justify-content: center;
         margin: 10px auto;
     }
+
+    .encorporate {
+        margin-left: 50%;
+    }
 }
 
 body.night .sky {
@@ -697,14 +701,16 @@ body.day .button-courses:hover {
     padding: 50px 60px;
 }
 
+
 .course-list {
-    background: linear-gradient(140deg, #0adf47, #04a89e) ;
+    background: linear-gradient(140deg, var(--main-green), var(--main-black)) ;
     border-top: 3px solid var(--moon-color);
     color: var(--moon-color);
     margin: 0;
     text-align: justify;
     padding: 50px 60px;    
-}
+}    
+
 
 body.day .course-list {
     background: white;
@@ -793,19 +799,24 @@ a:visited {
 .box {
     height: 220px;
     width: 220px;
-    display: inline-block;
-    align-self: center;
-    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--moon-color);
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
     border: 2px solid white;
-    border-radius: 15px ; 
-    margin: 20px;
-    
+    border-radius: 15px;
+    margin: 40px 10px;
+}
+
+.box > img {
+    max-height: 160%;
+    max-width: 160%;
 }
 
 
 .box:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 body.day .box {
@@ -815,7 +826,7 @@ body.day .box {
 }
 
 ::-webkit-scrollbar {
-    width: 12px !important;
+    width: 14px !important;
  }
 
 ::-webkit-scrollbar-track {
@@ -931,7 +942,7 @@ body.day .sign-in:hover {
 
 footer {
     border-top: 3px solid var(--moon-color);
-    background-color: #222;
+    background-color: var(--main-black);
     color: #fff;
     padding: 40px 0;
     display: inline-block;
@@ -1056,3 +1067,20 @@ footer {
   #pulse-wrapper #pulse span:nth-child(2) {
     animation-delay: 0.3s; 
   }
+
+  #pulse img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+}
+
+.div-course {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+

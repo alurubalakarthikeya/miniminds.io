@@ -61,17 +61,17 @@
                   <p><strong>Address:</strong><br>Nellore, Andhra Pradesh, India</p>
                   <p><strong>Contact:</strong><br>0123456789, 0123456789</p>
               </div>
-              <div class="social-links">
-                  <p><strong>Social Links: </strong></p>
-                  <ul>
-                      <li><a class="icon" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                      <li><a class="icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                      <li><a class="icon" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                      <li><a class="icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                  </ul>
-              </div>
           </div>
-          <div class="footer-section">
+          <div class=" footer-section social-links-div">
+            <h2 class="heading">Social Links</h2>
+            <ul class="quick-links">
+                <li><a class="icon" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                <li><a class="icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a class="icon" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a class="icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> FaceBook</a></li>
+            </ul>
+        </div>
+          <div class="footer-section quick-links-div">
               <h2 class="heading">Quick Links</h2>
               <ul class="quick-links">
                   <li><a href="index.html">Home</a></li>
@@ -81,8 +81,43 @@
                   <li><a href="contact.html">Contact</a></li>
               </ul>
           </div>
-          <div class="footer-section"><p>&copy; 2024 Mini Minds. All rights reserved.</p></div>
       </div>
   </footer>
     <!--Contact Us section Ends-->
-    <script src="script.js"></script>
+    <script src="script.js">
+        /*Function for Menu bar*/
+   menuIcon.addEventListener('click', (event) => {
+      event.stopPropagation(); 
+      menuItems.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (menuItems.classList.contains('active')) {
+        menuItems.classList.remove('active');
+      }
+    });
+
+    menuItems.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+/*Function for Menu bar*/
+/*Function for Cursor*/
+    const cursorDot = document.querySelector("[data-cursor-dot]");
+    const cursorOutline = document.querySelector("[data-cursor-outline]");
+    window.addEventListener("mousemove", (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+    
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+    
+        cursorOutline.style.left = `${posX}px`;
+        cursorOutline.style.top = `${posY}px`;
+    
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+    });
+    document.body.style.cursor = 'none';
+    </script>
