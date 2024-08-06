@@ -75,6 +75,7 @@ body.day header {
 
 body a {
     text-decoration: none;
+    color: var(--moon-color);
 }
 
 body.night .logo {
@@ -441,9 +442,10 @@ body.day .hehe > span {
         justify-content: center;
         margin: 10px auto;
     }
-
-    .encorporate {
-        margin-left: 50%;
+    
+    dialog {
+        top: 30%;
+        left: 5%;
     }
 }
 
@@ -1029,6 +1031,11 @@ footer {
         flex: 1 1 100%;
         text-align: center;
     }
+
+    dialog {
+        top: 30%;
+        left: 5%;
+    }
 }
 
 
@@ -1129,6 +1136,11 @@ footer {
         flex-direction: row;
         justify-content: space-between;
     }
+
+    dialog {
+        top: 30%;
+        left: 30%;
+    }
 }
 
 body p::selection {
@@ -1201,4 +1213,30 @@ body h2::selection {
     background-color: var(--night-sky);
     color: var(--main-white);
     text-align: justify;
+}
+
+dialog {
+    padding: 20px;
+    border: 1px solid var(--moon-color);
+    border-radius: 15px;
+    background-color: var(--main-green);
+    text-align: center;
+    color: var(--moon-color);
+}
+
+.our-courses {
+    background: url(images/games.jpeg);
+    width: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.our-courses:hover {
+    opacity: 0.4;
+}
+
+.our-courses > .heading {
+    opacity: 1;
+    color: var(--night-sky);
+    padding: 70px;
 }
