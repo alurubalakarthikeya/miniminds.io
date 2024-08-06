@@ -56,7 +56,7 @@
           <a>Mini <span>Minds</span></a>
       </div>
       <div class="footer-section" id="contact">
-          <h2 class="heading">Contact Us</h2>
+          <h2 class="heading">Contacts</h2>
           <div>
               <p><strong>Address:</strong><br>AP, India</p>
               <p><strong>Contact:</strong><br>0123456789</p>
@@ -85,40 +85,5 @@
   </div>
 </footer>
 <!--Contact Us section Ends-->
-    <script src="script.js">
-        /*Function for Menu bar*/
-   menuIcon.addEventListener('click', (event) => {
-      event.stopPropagation(); 
-      menuItems.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-      if (menuItems.classList.contains('active')) {
-        menuItems.classList.remove('active');
-      }
-    });
-
-    menuItems.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
-/*Function for Menu bar*/
-/*Function for Cursor*/
-    const cursorDot = document.querySelector("[data-cursor-dot]");
-    const cursorOutline = document.querySelector("[data-cursor-outline]");
-    window.addEventListener("mousemove", (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-    
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-    
-        cursorOutline.style.left = `${posX}px`;
-        cursorOutline.style.top = `${posY}px`;
-    
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-    document.body.style.cursor = 'none';
-    </script>
+<script src="script.js"></script>
+</body>
