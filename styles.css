@@ -1075,6 +1075,7 @@ footer {
   
   #pulse-wrapper #pulse span:nth-child(2) {
     animation-delay: 0.3s; 
+    border-radius: 50%;
   }
 
   #pulse img {
@@ -1082,8 +1083,9 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */
+    width: 60px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+    z-index: 10000;
 }
 
 .div-course {
