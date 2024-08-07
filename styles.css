@@ -150,6 +150,7 @@ nav ul.active {
     position: relative;
     z-index: 1000;
     animation: 1.5s fadeInUp;
+    animation-delay: 1s;
 }
 
 body.night .hero-content {
@@ -762,7 +763,7 @@ ul.icons {
 .icons > li > a> i {
     background-color: var(--main-green);
     color: var(--moon-color);
-    padding: 15px;
+    padding: 18px;
     font-size: 2vh;
     border: 2px solid var(--moon-color);
     margin: 10px;
@@ -777,7 +778,7 @@ ul.icons li i:hover {
 body.day .icons > li > a> i {
     background-color: var(--moon-color);
     color: var(--main-green);
-    padding: 15px;
+    padding: 18px;
     font-size: 2vh;
     border: 2px solid var(--main-green);
     margin: 10px;

@@ -10,11 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
 </head>
 <body class="night">
   <!--Cursor dot container-->
-  <div class="cursor-dot" data-cursor-dot></div>
-  <div class="cursor-outline" data-cursor-outline></div>
+  <div class="cursor-dot" data-cursor-dot-about></div>
+  <div class="cursor-outline" data-cursor-outline-about></div>
   <!--Cursor dot container-->
   <!--Loader animation-->
   <div id="pulse-wrapper">
@@ -54,24 +56,24 @@
       <h2 class="heading">About Us</h2>
     </div>
     <div id="about" class="about-2">
-        <div class="space fade-in-up-target">
+        <div class="space">
           <p>We're on a mission to transform learning from a chore into an exhilarating adventure. At Mini Minds, we believe every child is a budding genius, bursting with curiosity and a thirst for knowledge. That's why we've created a vibrant digital playground where learning is disguised as fun. Imagine a world where numbers dance, words sing, and creativity soars! Our interactive games, captivating activities, and imaginative stories are crafted to ignite young minds and foster a lifelong love of learning. We're talking puzzles that perplex and delight, challenges that spark ingenuity, and tales that transport little explorers to far-off lands. Make education exciting, engaging, and effective for kids aged 5 to 12. Let's turn ordinary study time into extraordinary adventures together!</p><br>
-          <strong>Why Trust Mini Minds?</strong>
+          <strong class="fade-in-left-target">Why Trust Mini Minds?</strong>
           <ul>
-            <li>
+            <li class="fade-in-left-target">
               <b><i>Scientifically Backed Fun:</i></b>
               <p>Studies show that children learn best when they are engaged and enjoying themselves. Our activities are designed to be both fun and educational, helping kids retain information better. </p>
-            </li>
-            <li>
+            </li><br>
+            <li class="fade-in-left-target">
               <b>Scientifically Backed Fun:</b>
-          <p>Studies show that children learn best when they are engaged and enjoying themselves. Our activities are designed to be both fun and educational, helping kids retain information better. </p>
-            </li>
-            <li>
+              <p>Studies show that children learn best when they are engaged and enjoying themselves. Our activities are designed to be both fun and educational, helping kids retain information better. </p>
+            </li><br>
+            <li class="fade-in-left-target">
               <b><i>Positive Learning Environment:</i></b>
-          <p>Creating a positive association with learning can foster a lifelong love of knowledge. Mini Minds is all about making education enjoyable and rewarding.</p>
+              <p>Creating a positive association with learning can foster a lifelong love of knowledge. Mini Minds is all about making education enjoyable and rewarding.</p>
             </li>
           </ul><br><br>
-          <a class="button-about" href="courses.html" target="_blank">Explore Courses</a>
+          <a class="button-about fade-in-up-target" href="courses.html" target="_blank">Explore Courses</a>
       </div>
     </div>
     <!--About section Ends-->
@@ -111,5 +113,5 @@
       </div>
   </footer>
   <!--Contact Us section Ends-->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
