@@ -1210,6 +1210,15 @@ body h2::selection {
     text-align: justify;
 }
 
+body.day .story-list {
+    padding: 60px;
+    margin: 0;
+    border-top: 1px solid var(--moon-color);
+    background-color: var(--moon-color);
+    color: var(--main-black);
+    text-align: justify;
+}
+
 dialog {
     padding: 20px;
     border: 1px solid var(--moon-color);
@@ -1297,3 +1306,19 @@ dialog {
         transform: translateY(0px);
     }
   }
+
+/* Hide menu items by default */
+.menu-items-1 {
+    display: none; /* Hide menu by default */
+    z-index: 1000; /* Ensure the dropdown is above other content */
+}
+
+
+/* Show the menu items when hovering over the nav */
+nav:hover .menu-items-1 {
+    display: block;
+}
+
+.menu-icon-1 {
+    color: var(--moon-color);
+}
