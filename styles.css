@@ -964,6 +964,15 @@ footer {
     padding: 0 20px;
 }
 
+.footer-container-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .footer-brand {
     flex: 1 1 100%;
     text-align: center;
@@ -1037,6 +1046,11 @@ footer {
     dialog {
         top: 30%;
         left: 5%;
+    }
+
+    .footer-section-page {
+        position: relative;
+        top: 15%;
     }
 }
 
