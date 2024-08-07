@@ -67,9 +67,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray('.fade-in-up-target').forEach(el => {
   gsap.fromTo(el, 
-    { opacity: 0, y: 100 },
+    { opacity: 0, filter: blur(5), y: 100 },
     {
       opacity: 1,
+      filter: blur(0),
       y: 0,
       duration: 2,
       scrollTrigger: {

@@ -149,6 +149,7 @@ nav ul.active {
     margin-top: 35vh;
     position: relative;
     z-index: 1000;
+    animation: 1.5s fadeInUp;
 }
 
 body.night .hero-content {
@@ -702,7 +703,7 @@ body.day .button-courses:hover {
     color: var(--moon-color);
     margin: 0;
     text-align: justify;
-    padding: 50px 60px;
+    padding: 50px;
 }
 
 
@@ -1283,4 +1284,15 @@ dialog {
 
   .navbar {
     position: sticky;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
   }
