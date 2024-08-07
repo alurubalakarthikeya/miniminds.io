@@ -855,7 +855,7 @@ body.day .box {
     color: var(--moon-color);
     border: 2px solid var(--moon-color);
     border-radius: 15px;
-    padding: 10px 110px;
+    padding: 10px 90px;
     left: 50%;
     margin-top: 15px;
     font-family: "Anek Devanagari", sans-serif;
@@ -940,7 +940,7 @@ body.day .sign-in:hover {
 }
 
 .hero-content button {
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
 }
 
@@ -1078,15 +1078,6 @@ footer {
     border-radius: 50%;
   }
 
-  #pulse img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px; /* Adjust the width as needed */
-    height: 60px; /* Adjust the height as needed */
-    z-index: 10000;
-}
 
 .div-course {
     display: flex;
@@ -1242,3 +1233,49 @@ dialog {
     color: var(--night-sky);
     padding: 70px;
 }
+
+  /* Styles for the content section */
+  
+  .content {
+    width: 77%;
+    margin: 50px auto;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    color: #6c767a;
+    line-height: 1.9;
+  }
+  @media (min-width: 500px) {
+    .content {
+      width: 43%;
+    }
+    #button {
+      margin: 30px;
+    }
+  }
+  .content h1 {
+    margin-bottom: -10px;
+    color: #03a9f4;
+    line-height: 1.5;
+  }
+  .content h3 {
+    font-style: italic;
+    color: #96a2a7;
+  }
+
+  .back-to-top {
+    color: var(--moon-color);
+    background-color: var(--main-green);
+    border: 1px solid var(--moon-color);
+    font-size: 2vh;
+    border-radius: 50%;
+    padding: 9px 16px 7px 16px;
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    transition: 0.4s ease;
+  }
+
+  .back-to-top:hover {
+    background-color: var(--main-white);
+    color: #008000;
+  }
