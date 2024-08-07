@@ -1133,7 +1133,7 @@ footer {
 .links-div {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Adjust as needed */
+    gap: 20px; 
 }
 
 .footer-section {
@@ -1258,8 +1258,6 @@ dialog {
     color: var(--night-sky);
     padding: 70px;
 }
-
-  /* Styles for the content section */
   
   .content {
     width: 77%;
@@ -1309,14 +1307,11 @@ dialog {
     }
   }
 
-/* Hide menu items by default */
 .menu-items-1 {
-    display: none; /* Hide menu by default */
-    z-index: 1000; /* Ensure the dropdown is above other content */
+    display: none; 
+    z-index: 1000;
 }
 
-
-/* Show the menu items when hovering over the nav */
 nav:hover .menu-items-1 {
     display: block;
 }
