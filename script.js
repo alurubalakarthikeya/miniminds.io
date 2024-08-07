@@ -74,7 +74,7 @@ gsap.utils.toArray('.fade-in-up-target').forEach(el => {
       duration: 2,
       scrollTrigger: {
         trigger: el,
-        start: 'top 90%',
+        start: 'top 95%',
         end: 'bottom 10%',
         scrub: true
       }
@@ -91,8 +91,8 @@ gsap.utils.toArray('.fade-in-left-target').forEach(el => {
       duration: 2,
       scrollTrigger: {
         trigger: el,
-        start: 'top 90%',
-        end: 'bottom 1s0%',
+        start: 'top 95%',
+        end: 'bottom 10%',
         scrub: true
       }
     }
@@ -107,8 +107,8 @@ gsap.utils.toArray('.fade-in-right-target').forEach(el => {
       duration: 2,
       scrollTrigger: {
         trigger: el,
-        start: 'top 80%',
-        end: 'bottom 20%',
+        start: 'top 95%',
+        end: 'bottom 10%',
         scrub: true
       }
     }
@@ -172,5 +172,4 @@ function signUp() {
     });
   });
 /*Loader Animation*/
-
 
