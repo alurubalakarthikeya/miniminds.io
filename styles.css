@@ -1339,4 +1339,16 @@ nav:hover .menu-items-1 {
         margin-top: 35vh;
         font-size: 1.5vh;
     }
+
+    .about {
+        padding: 40px;
+    }
+
+    .games {
+        padding: 40px;
+    }
+
+    .courses {
+        padding: 40px;
+    }
 }

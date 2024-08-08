@@ -92,7 +92,7 @@ gsap.utils.toArray('.fade-in-left-target').forEach(el => {
       duration: 2,
       scrollTrigger: {
         trigger: el,
-        start: 'top 95%',
+        start: 'top 97%',
         end: 'bottom 10%',
         scrub: true
       }
