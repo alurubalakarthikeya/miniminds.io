@@ -150,7 +150,6 @@ nav ul.active {
     position: relative;
     z-index: 1000;
     animation: 1.5s fadeInUp;
-    animation-delay: 1s;
 }
 
 body.night .hero-content {
@@ -778,7 +777,7 @@ ul.icons li i:hover {
 body.day .icons > li > a> i {
     background-color: var(--moon-color);
     color: var(--main-green);
-    padding: 18px;
+    padding: 17px;
     font-size: 2vh;
     border: 2px solid var(--main-green);
     margin: 10px;
@@ -1322,9 +1321,20 @@ nav:hover .menu-items-1 {
 }
 
 @media (max-width: 350px) {
-    .hero-content button {
-        width: 90%;
+
+    body.night .hero-content > p {
+        font-size: 1.7vh;
     }
+
+    body.day .hero-content > p {
+        font-size: 1.7vh;
+    }
+
+    body .hero-content > h4 {
+        font-size: 2.3vh;
+    }
+
+
     body.night .hero-content {
         border-radius: 20px;
         padding: 5px;
@@ -1351,4 +1361,15 @@ nav:hover .menu-items-1 {
     .courses {
         padding: 40px;
     }
+
+    body.day .icons > li > a> i {
+        padding: 17px;
+        font-size: 1.6vh;
+    }
+
+    body.night .icons > li > a> i {
+        padding: 17px;
+        font-size: 1.6vh;
+    }
 }
+

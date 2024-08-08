@@ -100,6 +100,7 @@ gsap.utils.toArray('.fade-in-left-target').forEach(el => {
   );
 });
 
+
 gsap.utils.toArray('.fade-in-right-target').forEach(el => {
   gsap.fromTo(el, 
     { opacity: 0}, 
@@ -117,28 +118,27 @@ gsap.utils.toArray('.fade-in-right-target').forEach(el => {
 });
 });
 /*Scroll Animation*/
-
-/*Sign In interface*/
+/*Sign-In function*/
 function signIn() {
   const heroContent = document.getElementById('hero-content');
   heroContent.innerHTML = `
-      <h4 style="font-weight: 350; margin-bottom: 10px;">Sign <span>In</span></h4>
-      <form>
-          <div class="form-group">
-              <input type="email" id="email" name="email" required>
-              <label for="email">Email:</label>
-          </div>
-          <div class="form-group">
-              <input type="password" id="password" name="password" required>
-              <label for="password">Password:</label>
-          </div>
-          <button class="sign-in" type="submit">Sign In</button>
-      </form>
-      <p>Don't have an account? <a href="#" onclick="signUp()">Sign up</a></p>
+    <h4 style="font-weight: 350; margin-bottom: 10px;">Sign <span>In</span></h4>
+    <form id="sign-in-form">
+      <div class="form-group">
+        <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" required>
+        <label for="password">Password:</label>
+      </div>
+      <button id="submit" class="sign-in" type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="signUp()">Sign up</a></p>
   `;
+  setupEventListeners();
 }
-/*Sign In interface*/
-
+/*Sign-In function*/
 /*Sign Up interface*/
 function signUp() {
   const heroContent = document.getElementById('hero-content');
@@ -161,6 +161,7 @@ function signUp() {
       </form>
       <p>Already have an account? <a href="#" onclick="signIn()">Sign in</a></p>
   `;
+  setupEventListeners();
 }
 /*Sign Up interface*/
 
