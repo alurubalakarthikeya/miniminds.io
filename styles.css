@@ -439,6 +439,10 @@ nav ul.active {
   transition: transform 0.5s ease;
 }
 
+.cursor-hidden {
+    display: none;
+}
+
 .cursor-dot {
     width: 7px;
     height: 7px;

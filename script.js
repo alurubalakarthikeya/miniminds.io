@@ -169,3 +169,22 @@ function signUp() {
     });
   });
 /*Loader Animation*/
+/*Handling the pointer while scrolling*/
+const cursorDot = document.querySelector('[data-cursor-dot]');
+const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+function handleScroll() {
+    cursorDot.classList.add('cursor-hidden');
+    cursorOutline.classList.add('cursor-hidden');
+}
+
+function handleScrollEnd() {
+    setTimeout(() => {
+        cursorDot.classList.remove('cursor-hidden');
+        cursorOutline.classList.remove('cursor-hidden');
+    }, 100); // Adjust the timeout to the desired delay
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('scroll', handleScrollEnd);
+/*Handling the pointer while scrolling*/
