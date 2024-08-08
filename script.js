@@ -60,7 +60,6 @@ document.getElementById("moon").addEventListener("click", toggleMode);
     document.body.style.cursor = 'none';
 });
 /*Function for Cursor*/
-
 /*Scroll Animation*/
 document.addEventListener("DOMContentLoaded", function() {
 gsap.registerPlugin(ScrollTrigger);
@@ -100,7 +99,6 @@ gsap.utils.toArray('.fade-in-left-target').forEach(el => {
   );
 });
 
-
 gsap.utils.toArray('.fade-in-right-target').forEach(el => {
   gsap.fromTo(el, 
     { opacity: 0}, 
@@ -136,7 +134,6 @@ function signIn() {
     </form>
     <p>Don't have an account? <a href="#" onclick="signUp()">Sign up</a></p>
   `;
-  setupEventListeners();
 }
 /*Sign-In function*/
 /*Sign Up interface*/
@@ -161,10 +158,8 @@ function signUp() {
       </form>
       <p>Already have an account? <a href="#" onclick="signIn()">Sign in</a></p>
   `;
-  setupEventListeners();
 }
 /*Sign Up interface*/
-
 /*Loader Animation*/
   document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {

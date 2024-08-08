@@ -318,6 +318,7 @@ body.day .hehe > span {
     color: var(--moon-color);
 }
 
+/*Media Quieries start here*/
 @media (max-width: 400px) {
     .hehe {
         font-size: 2.5vh;
@@ -449,6 +450,77 @@ body.day .hehe > span {
         left: 5%;
     }
 }
+
+@media (max-width: 350px) {
+
+    body.night .hero-content > p {
+        font-size: 1.7vh;
+    }
+
+    body.day .hero-content > p {
+        font-size: 1.7vh;
+    }
+
+    body .hero-content > h4 {
+        font-size: 2.3vh;
+    }
+
+
+    body.night .hero-content {
+        border-radius: 20px;
+        padding: 5px;
+        margin: 10px;
+        margin-top: 35vh;
+        font-size: 1.5vh;
+    }
+    body.day .hero-content {
+        border-radius: 20px;
+        padding: 5px;
+        margin: 10px;
+        margin-top: 35vh;
+        font-size: 1.5vh;
+    }
+
+    .about {
+        padding: 40px;
+    }
+
+    .games {
+        padding: 40px;
+    }
+
+    .courses {
+        padding: 40px;
+    }
+
+    body.day .icons > li > a> i {
+        padding: 17px;
+        font-size: 1.6vh;
+    }
+
+    body.night .icons > li > a> i {
+        padding: 17px;
+        font-size: 1.6vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    dialog {
+        top: 30%;
+        left: 5%;
+    }
+
+    .footer-section-page {
+        position: relative;
+        top: 15%;
+    }
+}
+/*Media Quieries end here*/
 
 body.night .sky {
     position: absolute;
@@ -1036,22 +1108,6 @@ footer {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .footer-section {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    dialog {
-        top: 30%;
-        left: 5%;
-    }
-
-    .footer-section-page {
-        position: relative;
-        top: 15%;
-    }
-}
 
 
 @keyframes pulse_animation {
@@ -1148,6 +1204,10 @@ footer {
     dialog {
         top: 30%;
         left: 30%;
+    }
+
+    .icons > li > a > i {
+        padding: 15px;
     }
 }
 
@@ -1318,58 +1378,5 @@ nav:hover .menu-items-1 {
 
 .menu-icon-1 {
     color: var(--moon-color);
-}
-
-@media (max-width: 350px) {
-
-    body.night .hero-content > p {
-        font-size: 1.7vh;
-    }
-
-    body.day .hero-content > p {
-        font-size: 1.7vh;
-    }
-
-    body .hero-content > h4 {
-        font-size: 2.3vh;
-    }
-
-
-    body.night .hero-content {
-        border-radius: 20px;
-        padding: 5px;
-        margin: 10px;
-        margin-top: 35vh;
-        font-size: 1.5vh;
-    }
-    body.day .hero-content {
-        border-radius: 20px;
-        padding: 5px;
-        margin: 10px;
-        margin-top: 35vh;
-        font-size: 1.5vh;
-    }
-
-    .about {
-        padding: 40px;
-    }
-
-    .games {
-        padding: 40px;
-    }
-
-    .courses {
-        padding: 40px;
-    }
-
-    body.day .icons > li > a> i {
-        padding: 17px;
-        font-size: 1.6vh;
-    }
-
-    body.night .icons > li > a> i {
-        padding: 17px;
-        font-size: 1.6vh;
-    }
 }
 
