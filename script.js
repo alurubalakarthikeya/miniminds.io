@@ -169,4 +169,3 @@ function signUp() {
     });
   });
 /*Loader Animation*/
-

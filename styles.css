@@ -9,6 +9,7 @@
     --moon-color: #f9f9f9;
 }
 /*Only Colors of the site*/
+/*Responsive code*/
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -22,24 +23,24 @@ body {
     overflow-x: hidden;
 }
 
-body.night {
-    background-color: var(--night-sky);
+body a {
+    text-decoration: none;
+    color: var(--moon-color);
 }
 
-body.day {
-    background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%);
+body p::selection {
+    background-color: black;
+    color: var(--moon-color);
 }
 
-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    border-bottom: 2px solid var(--main-white);
-    z-index: 10000;
+body a::selection {
+    background-color: black;
+    color: var(--moon-color);
+}
+
+body h2::selection {
+    background-color: black;
+    color: var(--main-white);
 }
 
 html, body {
@@ -49,11 +50,95 @@ html, body {
 body > header {
     position: sticky;
 }
+/*Responsive code*/
+/*Night stylings start here*/
+body.night {
+    background-color: var(--night-sky);
+}
 
 body.night header {
     background-color: rgba(44,62,80,1);
     top: 0;
     position: sticky;
+}
+
+body.night .logo {
+    color: var(--moon-color);
+}
+
+body.night .hero-content {
+    color: var(--moon-color);
+    background-color: rgba(184, 192, 184, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+body.night .sun {
+    opacity: 0;
+    display: none;
+}
+
+body.night .moon {
+    opacity: 1;
+    display: block;
+}
+
+body.night .sky {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1b2735, #2c3e50, #34495e);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: 2s ease-in-out;
+}
+
+body.night .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    display: block;
+    background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+}
+
+body.night h3 {
+    font-family: "Rammetto One";
+    text-align: center;
+    font-size: 1.75rem;
+    width: 55%;
+    margin: 5rem auto;
+    line-height: 3rem;
+    letter-spacing: 5px;
+}
+
+body.night nav ul li a {
+    background-color: var(--night-sky);
+    color: var(--moon-color);
+}
+
+body.night nav ul li a:hover {
+    background-color: var(--main-green);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
+}
+
+body.night nav ul {
+    background-color: var(--night-sky);
+    margin-bottom: 10px;
+}
+
+
+body.night .cursor-dot {
+    background-color: var(--moon-color);
+}
+/*Night stylings ends here*/
+/*Day stylings starts here*/
+body.day {
+    background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%);
 }
 
 body.day header {
@@ -62,6 +147,189 @@ body.day header {
     top: 0;
 }
 
+body.day .logo a {
+    color: var(--main-green);
+}
+
+body.day .logo span {
+    color: var(--moon-color);
+}
+
+body.day .hero-content {
+    color: var(--moon-color);
+    background-color: rgba(108, 145, 108, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+body.day .hero-content > p {
+    color: var(--main-green);
+}
+
+body.day .sun {
+    opacity: 1;
+    display: block;
+}
+
+body.day .moon {
+    opacity: 0;
+    display: none;
+}
+
+body.day .hehe {
+    color: var(--main-green);
+}
+
+body.day .hehe > span {
+    color: var(--moon-color);
+}
+
+body.day h3 {
+    font-family: "Rammetto One";
+    text-align: center;
+    font-size: 1.75rem;
+    width: 55%;
+    margin: 5rem auto;
+    line-height: 3rem;
+    letter-spacing: 5px;
+}
+
+body.day nav ul li a {
+    background-color: rgba(167,214,220,0.75);
+    border-radius: 20px;
+    color: var(--main-white);
+}
+
+
+body.day nav ul li a:hover {
+    background-color: var(--moon-color);
+    color: var(--main-blue);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
+}
+
+
+body.day nav ul {
+    margin-bottom: 10px;
+}
+
+body.day .courses {
+    background-color: var(--moon-color);
+    color: var(--night-sky);
+    border-top: 3px solid var(--night-sky);
+}
+
+body.day .button-courses {
+    background-color: var(--moon-color);
+    color: var(--night-sky);
+    border: 1px solid var(--night-sky);
+}
+
+body.day .button-courses:hover {
+    background-color: var(--night-sky);
+    color: var(--moon-color);
+}
+
+
+body.day .course-list {
+    background: white;
+    border-top: var(--main-green);
+    color: var(--moon-color);
+    margin: 0;
+    text-align: justify;
+    padding: 50px 60px;    
+}
+
+body.day .course-list > h2 {
+    color: var(--main-green);
+    border-bottom: 2px solid var(--main-green);
+}
+
+body.day .contact {
+    background-color: var(--main-black);
+    color: var(--main-green);
+    border-top: 3px solid var(--main-black);
+}
+
+body.day .icons > li > a> i {
+    background-color: var(--moon-color);
+    color: var(--main-green);
+    padding: 17px;
+    font-size: 2vh;
+    border: 2px solid var(--main-green);
+    margin: 10px;
+    border-radius: 50%;
+}
+
+body.day ul.icons li i:hover {
+    background-color: var(--main-green);
+    color: var(--moon-color);
+}
+
+body.day .box {
+    background-color: var(--main-white);
+    border: 3px solid var(--main-green);
+    color: var(--main-green);
+}
+
+body.day .sign-in {
+    background-color: var(--moon-color);
+    color: var(--main-green);
+    border: 2px solid var(--main-green);
+    border-radius: 15px;
+    padding: 10px 110px;
+    left: 50%;
+    margin-top: 15px;
+    font-family: "Anek Devanagari", sans-serif;
+    font-size: 2vh;
+    font-weight: 400;
+}
+
+body.day .sign-in:hover {
+    background-color: var(--main-green);
+    color: var(--moon-color);
+}
+
+body.day .story-list {
+    padding: 60px;
+    margin: 0;
+    border-top: 1px solid var(--moon-color);
+    background-color: var(--moon-color);
+    color: var(--main-black);
+    text-align: justify;
+}
+/*End of the day stylings*/
+/*Loader animation styling*/
+#pulse-wrapper {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--main-green); 
+  z-index: 999999;
+}
+
+#pulse-wrapper #pulse {
+  margin: auto;
+}
+
+#pulse-wrapper #pulse span {
+  position: absolute;
+  margin-top: -25px; 
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--moon-color);
+  animation: pulse_animation 1.3s infinite;
+}
+
+#pulse-wrapper #pulse span:nth-child(2) {
+  animation-delay: 0.3s; 
+  border-radius: 50%;
+}
+/*Loader animation styling*/
+/*Logo styling*/
 .logo {
     font-size: 2.8vh;
     font-weight: bold;
@@ -72,25 +340,21 @@ body.day header {
     text-decoration: none;
 }
 
-body a {
-    text-decoration: none;
-    color: var(--moon-color);
-}
-
-body.night .logo {
-    color: var(--moon-color);
-}
-
-body.day .logo a {
-    color: var(--main-green);
-}
-
 .logo span {
     color: var(--main-green);
 }
-
-body.day .logo span {
-    color: var(--moon-color);
+/*Logo styling*/
+/*Nav bar styling*/
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 2px solid var(--main-white);
+    z-index: 10000;
 }
 
 nav {
@@ -134,13 +398,147 @@ nav ul.active {
     display: block !important;
     background-color: transparent;
 }
-
-.hero {
+/*Nav bar styling*/
+/*Home interface*/
+.sun-moon-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 47vh;
-    text-align: center;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 20px;
+    z-index: 1;
+}
+
+.sun, .moon {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 1s ease;
+    display: none;
+}
+
+.sun {
+    display: block;
+    background-color: yellow;
+    box-shadow: 0 0 20px 5px yellow;
+}
+
+.moon {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0 20px 5px #fff;
+}
+
+/*Cursor styling*/
+[data-cursor-dot],
+[data-cursor-outline] {
+  transition: transform 0.5s ease;
+}
+
+.cursor-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 10% transparent;
+    background-color: var(--main-green);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.cursor-outline {
+    width: 25px;
+    height: 25px;
+    border: 2px solid transparent;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.cursor-dot, 
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 100000;
+    pointer-events: none;
+}
+/*Cursor styling*/
+/*sign-in, sign-up form*/
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group input {
+    background-color: transparent;
+    border: 3px solid var(--main-white);
+    border-radius: 11px;
+    outline: none;
+    padding: 12px 12px 12px 0;
+    width: 100%;
+    font-size: 16px;
+    color: var(--main-white);
+    padding-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 250;
+}
+
+.form-group input:focus {
+    border-color: var(--main-white);
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 0 12px;
+    font-size: 16px;
+    color: var(--main-green);
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.2s;
+    background-color: var(--moon-color);
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--main-green);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.hero-content button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icons > li > a> i {
+    background-color: var(--main-green);
+    color: var(--moon-color);
+    padding: 18px;
+    font-size: 2.2vh;
+    border: 3px solid var(--moon-color);
+    margin: 10px;
+    border-radius: 50%;
+}
+
+ul.icons li i:hover {
+    background-color: var(--moon-color);
+    color: rgb(13, 139, 13);
+}
+
+ul.icons li i:visited {
+    color: var(--moon-color);
+}
+
+a:visited {
+    color: var(--moon-color);
 }
 
 .hero-content {
@@ -149,20 +547,6 @@ nav ul.active {
     position: relative;
     z-index: 1000;
     animation: 1.5s fadeInUp;
-}
-
-body.night .hero-content {
-    color: var(--moon-color);
-    background-color: rgba(184, 192, 184, 0.4);
-    border-radius: 20px;
-    padding: 15px;
-}
-
-body.day .hero-content {
-    color: var(--moon-color);
-    background-color: rgba(108, 145, 108, 0.4);
-    border-radius: 20px;
-    padding: 15px;
 }
 
 .hero-content span {
@@ -178,8 +562,71 @@ body.day .hero-content {
     font-size: 2vh;
 }
 
-body.day .hero-content > p {
-    color: var(--main-green);
+.sign-in {
+    background-color: var(--main-green);
+    color: var(--moon-color);
+    border: 3px solid var(--moon-color);
+    border-radius: 15px;
+    padding: 10px 110px;
+    left: 50%;
+    margin-top: 15px;
+    font-family: "Anek Devanagari", sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.sign-in:hover {
+    background-color: var(--moon-color);
+    color: rgb(13, 139, 13);
+}
+
+ul.icons {
+    display: inline-flex;
+    left: 50%;
+    list-style-type: none;
+    text-decoration: none;
+    z-index: 10;
+    margin-top: 10px;
+}
+/*sign-in, sign-up form*/
+
+#menu-items.active {
+    display: block;
+}
+
+.menu-items-1 {
+    display: none; 
+    z-index: 1000;
+}
+  
+nav:hover .menu-items-1 {
+    display: block;
+}
+  
+.menu-icon-1 {
+    color: var(--moon-color);
+}
+
+.hehe {
+    font-size: 2.5vh;
+    font-family: "Architects Daughter", sans-serif;
+    font-weight: 600;
+}
+
+.back-to-top {
+    position: fixed;
+    top: 90%;
+    right: 8%;
+    font-size: 3.7vh;
+}
+  
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47vh;
+    text-align: center;
 }
 
 .tree-1 {
@@ -224,6 +671,17 @@ body.day .hero-content > p {
     z-index: 2;
 }
 
+.menu-icon {
+    color: var(--main-white);
+    margin: 0;
+}
+
+.stone {
+    position: relative;
+    top: 34.5px;
+}
+/*End of home interface*/
+/*Animations*/
 @keyframes float {
     0% {
         transform: translateX(-80%);
@@ -239,82 +697,48 @@ body.day .hero-content > p {
     }
 }
 
-.sun-moon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 110px;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 20px;
-    z-index: 1;
+@keyframes pulse_animation {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8) 
+    }
+    100% { 
+        box-shadow: 0 0 0 200px rgba(254, 206, 104, 0) 
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+/*Animations end here*/
+/*scrollbar styling for desktops*/
+::-webkit-scrollbar {
+    width: 14px !important;
 }
 
-.sun, .moon {
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: opacity 1s ease;
-    display: none;
+::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+   -webkit-border-radius: 10px !important;
+   border-radius: 10px !important;
 }
 
-.sun {
-    display: block;
-    background-color: yellow;
-    box-shadow: 0 0 20px 5px yellow;
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px !important;
+  border-radius: 10px !important;
+  background:var(--main-green) !important; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
 }
 
-body.night .sun {
-    opacity: 0;
-    display: none;
+::-webkit-scrollbar-thumb:window-inactive {
+  background: var(--main-green)!important; 
 }
-
-body.day .sun {
-    opacity: 1;
-    display: block;
-}
-
-[data-cursor-dot],
-[data-cursor-outline] {
-  transition: transform 0.5s ease;
-}
-
-.moon {
-    display: none;
-    background-color: #fff;
-    box-shadow: 0 0 20px 5px #fff;
-}
-
-body.night .moon {
-    opacity: 1;
-    display: block;
-}
-
-body.day .moon {
-    opacity: 0;
-    display: none;
-}
-
-#menu-items.active {
-    display: block;
-}
-
-.hehe {
-    font-size: 2.5vh;
-    font-family: "Architects Daughter", sans-serif;
-    font-weight: 600;
-}
-
-body.day .hehe {
-    color: var(--main-green);
-}
-
-body.day .hehe > span {
-    color: var(--moon-color);
-}
-
+/*scrollbar styling for desktops*/
 /*Media Quieries start here*/
 @media (max-width: 400px) {
     .hehe {
@@ -353,7 +777,7 @@ body.day .hehe > span {
 @media (max-width: 700px) {
     body.night nav ul {
         display: none;
-        background-color: transparent;
+        background-color: var(--night-sky);
         text-align: center;
         color: var(--night-sky);
         border-radius: 20px;
@@ -517,112 +941,33 @@ body.day .hehe > span {
         top: 15%;
     }
 }
+
+@media (min-width: 768px) {
+    .links-div {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    dialog {
+        top: 30%;
+        left: 30%;
+    }
+
+    .icons > li > a > i {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 500px) {
+    .content {
+      width: 43%;
+    }
+    #button {
+      margin: 30px;
+    }
+  }
 /*Media Quieries end here*/
-
-body.night .sky {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #1b2735, #2c3e50, #34495e);
-    z-index: -1;
-    top: 0;
-    left: 0;
-    transition: 2s ease-in-out;
-}
-
-body.night .stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    display: block;
-    background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
-}
-
-body.night h3 {
-    font-family: "Rammetto One";
-    text-align: center;
-    font-size: 1.75rem;
-    width: 55%;
-    margin: 5rem auto;
-    line-height: 3rem;
-    letter-spacing: 5px;
-}
-
-body.day h3 {
-    font-family: "Rammetto One";
-    text-align: center;
-    font-size: 1.75rem;
-    width: 55%;
-    margin: 5rem auto;
-    line-height: 3rem;
-    letter-spacing: 5px;
-}
-
-body.night nav ul li a {
-    background-color: var(--night-sky);
-    color: var(--moon-color);
-}
-
-body.day nav ul li a {
-    background-color: rgba(167,214,220,0.75);
-    border-radius: 20px;
-    color: var(--main-white);
-}
-
-body.night nav ul li a:hover {
-    background-color: var(--main-green);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
-}
-
-body.day nav ul li a:hover {
-    background-color: var(--moon-color);
-    color: var(--main-blue);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
-}
-
-body.night nav ul {
-    background-color: var(--night-sky);
-    margin-bottom: 10px;
-}
-
-body.day nav ul {
-    margin-bottom: 10px;
-}
-
-.cursor-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 10% transparent;
-    background-color: var(--main-green);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
-}
-
-.cursor-outline {
-    width: 25px;
-    height: 25px;
-    border: 2px solid transparent;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
-}
-
-.cursor-dot, 
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 100000;
-    pointer-events: none;
-}
-
-.hidden {
-    display: none;
-}
-
+/*About section styling*/
 .about {
     background-color: var(--main-green);
     color: var(--main-white);
@@ -634,518 +979,23 @@ body.day nav ul {
     text-align: justify;
 }
 
-.about > p {
-    padding: 50px;
-}
-
-body.night .cursor-dot {
-    background-color: var(--moon-color);
-}
-
-.menu-icon {
-    color: var(--main-white);
-    margin: 0;
-}
-
-.stone {
-    position: relative;
-    top: 34.5px;
-}
-
-.courses {
-    padding: 60px 50px;
-    margin: 0;
-    border-top: 3px solid var(--moon-color);
-    background-color: var(--night-sky);
-    color: var(--main-white);
-    text-align: justify;
-}
-
-body.day .courses {
-    background-color: var(--moon-color);
-    color: var(--night-sky);
-    border-top: 3px solid var(--night-sky);
-}
-
-.course {
-    height: 230px;
-    width: 220px;
-    background-color: var(--main-green);
-    border-radius: 20px;
-    margin: 5px;
-    padding: 10px;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
-    transition: 1s ease-in;
-}
-
-.course:hover {
-    color: var(--main-green);
-    background-color: var(--main-dark);
-}
-
 .heading {
     font-size: 3.5vh;
+    font-weight: 600;
     clear: both;
     display: inline-block;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--moon-color); 
 }
 
-.button-about {
-    background-color: var(--main-green);
-    color: var(--moon-color);
-    transition: 0.4s;
-    border: 1px solid var(--moon-color);
-    border-radius: 26px;
-    padding: 11px 17px;
-    text-decoration: none;
-}
 
-.button-about:hover {
-    background-color: var(--moon-color);
-    color: var(--main-green);
-}
-
-.button-courses {
-    background-color: var(--night-sky);
-    color: var(--moon-color);
-    transition: 0.4s;
-    border: 1px solid var(--moon-color);
-    border-radius: 26px;
-    padding: 11px 17px;
-    text-decoration: none;
-}
-
-.button-courses:hover {
-    background-color: var(--moon-color);
-    color: var(--night-sky);
-}
-
-body.day .button-courses {
-    background-color: var(--moon-color);
-    color: var(--night-sky);
-    border: 1px solid var(--night-sky);
-}
-
-body.day .button-courses:hover {
-    background-color: var(--night-sky);
-    color: var(--moon-color);
-}
-
-.button-games {
-    background-color: inherit;
-    color: var(--moon-color);
-    transition: 0.4s;
-    border: 1px solid var(--moon-color);
-    border-radius: 26px;
-    padding: 11px 17px;
-    text-decoration: none;
-}
-
-.button-games:hover {
-    background-color: var(--moon-color);
-    color: #3299cc;
+.about > p {
+    padding: 50px;
 }
 
 .about > img {
     position: relative;
     float: right;
-}
-
-.games > img {
-    position: relative;
-    float: right;
-}
-
-.courses > img {
-    position: relative;
-    float: right;
-}
-
-.games {
-    background: linear-gradient(120deg, #2E3192, #15cdcd);
-    animation-timing-function: ease-in-out;
-    border-top: 3px solid var(--moon-color);
-    color: var(--moon-color);
-    margin: 0;
-    text-align: justify;
-    padding: 50px;
-}
-
-.course-list {
-    background: linear-gradient(140deg, var(--main-green), var(--main-black)) ;
-    border-top: 3px solid var(--moon-color);
-    color: var(--moon-color);
-    margin: 0;
-    text-align: justify;
-    padding: 50px 60px;    
-}    
-
-body.day .course-list {
-    background: white;
-    border-top: var(--main-green);
-    color: var(--moon-color);
-    margin: 0;
-    text-align: justify;
-    padding: 50px 60px;    
-}
-
-body.day .course-list > h2 {
-    color: var(--main-green);
-    border-bottom: 2px solid var(--main-green);
-}
-
-.contact  {
-    color: var(--moon-color);
-    margin: 0;
-    text-align: justify;
-    padding: 50px 60px;    
-}
-
-body.day .contact {
-    background-color: var(--main-black);
-    color: var(--main-green);
-    border-top: 3px solid var(--main-black);
-}
-
-ul.icons {
-    display: inline-flex;
-    left: 50%;
-    list-style-type: none;
-    text-decoration: none;
-    z-index: 10;
-    margin-top: 10px;
-}
-
-.course-list {
-    background-color: rgba(0,128,0,0.4);
-    display: block;
-    border-top: 3px solid var(--moon-color);
-}
-
-.icons > li > a> i {
-    background-color: var(--main-green);
-    color: var(--moon-color);
-    padding: 18px;
-    font-size: 2vh;
-    border: 2px solid var(--moon-color);
-    margin: 10px;
-    border-radius: 50%;
-}
-
-ul.icons li i:hover {
-    background-color: var(--moon-color);
-    color: rgb(13, 139, 13);
-}
-
-body.day .icons > li > a> i {
-    background-color: var(--moon-color);
-    color: var(--main-green);
-    padding: 17px;
-    font-size: 2vh;
-    border: 2px solid var(--main-green);
-    margin: 10px;
-    border-radius: 50%;
-}
-
-body.day ul.icons li i:hover {
-    background-color: var(--main-green);
-    color: var(--moon-color);
-}
-
-ul.icons li i:visited {
-    color: var(--moon-color);
-}
-
-a:visited {
-    color: var(--moon-color);
-}
-
-.aboutus {
-    background-color: var(--main-pink);
-}
-
-.box {
-    height: 220px;
-    width: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--moon-color);
-    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
-    border: 2px solid white;
-    border-radius: 15px;
-    margin: 40px 10px;
-}
-
-.box > img {
-    max-height: 160%;
-    max-width: 160%;
-}
-
-.box:hover {
-    opacity: 0.7;
-}
-
-body.day .box {
-    background-color: var(--main-white);
-    border: 3px solid var(--main-green);
-    color: var(--main-green);
-}
-
-::-webkit-scrollbar {
-    width: 14px !important;
- }
-
-::-webkit-scrollbar-track {
-   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
-   -webkit-border-radius: 10px !important;
-   border-radius: 10px !important;
- }
-
- ::-webkit-scrollbar-thumb {
-   -webkit-border-radius: 10px !important;
-   border-radius: 10px !important;
-   background:var(--main-green) !important; 
-   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
- }
-
- ::-webkit-scrollbar-thumb:window-inactive {
-   background: var(--main-green)!important; 
- }
-
-.sign-in {
-    background-color: var(--main-green);
-    color: var(--moon-color);
-    border: 2px solid var(--moon-color);
-    border-radius: 15px;
-    padding: 10px 110px;
-    left: 50%;
-    margin-top: 15px;
-    font-family: "Anek Devanagari", sans-serif;
-    font-size: 2vh;
-    font-weight: 400;
-}
-
-.sign-in:hover {
-    background-color: var(--moon-color);
-    color: rgb(13, 139, 13);
-}
-
-body.day .sign-in {
-    background-color: var(--moon-color);
-    color: var(--main-green);
-    border: 2px solid var(--main-green);
-    border-radius: 15px;
-    padding: 10px 110px;
-    left: 50%;
-    margin-top: 15px;
-    font-family: "Anek Devanagari", sans-serif;
-    font-size: 2vh;
-    font-weight: 400;
-}
-
-body.day .sign-in:hover {
-    background-color: var(--main-green);
-    color: var(--moon-color);
-}
-
-.img-fluid {
-    position: relative;
-    left: 50%;
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.form-group input {
-    background-color: transparent;
-    border: 3px solid var(--main-white);
-    border-radius: 11px;
-    outline: none;
-    padding: 12px 12px 12px 0;
-    width: 100%;
-    font-size: 16px;
-    color: var(--main-white);
-    padding-left: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 250;
-}
-
-.form-group input:focus {
-    border-color: var(--main-white);
-}
-
-.form-group label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    padding: 0 12px;
-    font-size: 16px;
-    color: var(--main-green);
-    pointer-events: none;
-    transform: translateY(-50%);
-    transition: 0.2s;
-    background-color: var(--moon-color);
-}
-
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label {
-    top: 0;
-    width: 100%;
-    transform: translateY(-50%);
-    font-size: 12px;
-    color: var(--main-green);
-    border-radius: 10px 10px 0px 0px;
-}
-
-.hero-content button {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-footer {
-    border-top: 3px solid var(--moon-color);
-    background-color: var(--main-black);
-    color: #fff;
-    padding: 40px 0;
-    display: inline-block;
-    width: 100%;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-container-page {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-brand {
-    flex: 1 1 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: "Architects Daughter", sans-serif;
-}
-
-.footer-brand a {
-    font-size: 24px;
-    color: var(--main-green);
-    text-decoration: none;
-}
-
-.footer-brand a span {
-    color: var(--moon-color);
-}
-
-.footer-section {
-    flex: 1 1 30%;
-    margin-bottom: 20px;
-}
-
-.footer-section h2.heading {
-    font-size: 20px;
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-.footer-section p {
-    margin: 10px 0;
-}
-
-.social-links ul, .quick-links {
-    list-style: none;
-    padding: 0;
-}
-
-.social-links ul li, .quick-links li {
-    display: inline-block;
-}
-
-.social-links ul li a, .quick-links li a {
-    color: #4CAF50;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.social-links ul li a:hover, .quick-links li a:hover {
-    color: #fff;
-}
-
-.quick-links li {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.quick-links li a {
-    font-size: 16px;
-}
-
-.quick-links li a:hover {
-    text-decoration: underline;
-}
-
-@keyframes pulse_animation {
-    0% { 
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8) 
-    }
-    100% { 
-        box-shadow: 0 0 0 200px rgba(254, 206, 104, 0) 
-    }
-  }
-  
-  #pulse-wrapper {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: var(--main-green); 
-    z-index: 999999;
-  }
-  
-  #pulse-wrapper #pulse {
-    margin: auto;
-  }
-  
-  #pulse-wrapper #pulse span {
-    position: absolute;
-    margin-top: -25px; 
-    margin-left: -25px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--moon-color);
-    animation: pulse_animation 1.3s infinite;
-  }
-  
-  #pulse-wrapper #pulse span:nth-child(2) {
-    animation-delay: 0.3s; 
-    border-radius: 50%;
-  }
-
-
-.div-course {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .about-us {
@@ -1176,46 +1026,50 @@ footer {
     text-align: justify;
 }
 
-.links-div {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-}
-
-.footer-section {
-    flex: 1;
-}
-
-@media (min-width: 768px) {
-    .links-div {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    dialog {
-        top: 30%;
-        left: 30%;
-    }
-
-    .icons > li > a > i {
-        padding: 15px;
-    }
-}
-
-body p::selection {
-    background-color: black;
+.button-about {
+    background-color: var(--main-green);
     color: var(--moon-color);
+    transition: 0.4s;
+    border: 1px solid var(--moon-color);
+    border-radius: 26px;
+    padding: 11px 17px;
+    text-decoration: none;
 }
 
-body a::selection {
-    background-color: black;
-    color: var(--moon-color);
+.button-about:hover {
+    background-color: var(--moon-color);
+    color: var(--main-green);
 }
-
-body h2::selection {
-    background-color: black;
+/*About section styling ends*/
+/*Games, stories and Courses section starts*/
+.courses {
+    padding: 60px 50px;
+    margin: 0;
+    border-top: 3px solid var(--moon-color);
+    background-color: var(--night-sky);
     color: var(--main-white);
+    text-align: justify;
 }
+
+.course {
+    height: 230px;
+    width: 220px;
+    background-color: var(--main-green);
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    transition: 1s ease-in;
+}
+
+.course:hover {
+    color: var(--main-green);
+    background-color: var(--main-dark);
+}
+
 
 .our-stories {
     background: url(images/sky.jpeg);
@@ -1234,52 +1088,12 @@ body h2::selection {
     padding: 70px;
 }
 
-#scroll {
-    position:fixed;
-    right:10px;
-    bottom:10px;
-    cursor:pointer;
-    width:50px;
-    height:50px;
-    background-color:#3498db;
-    text-indent:-9999px;
-    display:none;
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;
-    border-radius:60px
-}
-#scroll span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:#ffffff;
-}
-#scroll:hover {
-    background-color:#e74c3c;
-    opacity:1;filter:"alpha(opacity=100)";
-    -ms-filter:"alpha(opacity=100)";
-}
-
 .story-list {
     padding: 60px;
     margin: 0;
     border-top: 1px solid var(--moon-color);
     background-color: var(--night-sky);
     color: var(--main-white);
-    text-align: justify;
-}
-
-body.day .story-list {
-    padding: 60px;
-    margin: 0;
-    border-top: 1px solid var(--moon-color);
-    background-color: var(--moon-color);
-    color: var(--main-black);
     text-align: justify;
 }
 
@@ -1308,65 +1122,279 @@ dialog {
     color: var(--night-sky);
     padding: 70px;
 }
-  
-  .content {
-    width: 77%;
-    margin: 50px auto;
-    font-family: 'Merriweather', serif;
-    font-size: 17px;
-    color: #6c767a;
-    line-height: 1.9;
-  }
 
-  @media (min-width: 500px) {
-    .content {
-      width: 43%;
-    }
-    #button {
-      margin: 30px;
-    }
-  }
-  .content h1 {
-    margin-bottom: -10px;
-    color: #03a9f4;
-    line-height: 1.5;
-  }
-  .content h3 {
-    font-style: italic;
-    color: #96a2a7;
-  }
-
-  .back-to-top {
-    position: fixed;
-    top: 90%;
-    right: 8%;
-    font-size: 3.5vh;
-  }
-
-  .navbar {
-    position: sticky;
-  }
-
-  @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(200px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-  }
-
-.menu-items-1 {
-    display: none; 
-    z-index: 1000;
+.courses > img {
+    position: relative;
+    float: right;
 }
 
-nav:hover .menu-items-1 {
+.button-courses {
+    background-color: var(--night-sky);
+    color: var(--moon-color);
+    transition: 0.4s;
+    border: 1px solid var(--moon-color);
+    border-radius: 26px;
+    padding: 11px 17px;
+    text-decoration: none;
+}
+
+.button-courses:hover {
+    background-color: var(--moon-color);
+    color: var(--night-sky);
+}
+
+.button-games {
+    background-color: inherit;
+    color: var(--moon-color);
+    transition: 0.4s;
+    border: 1px solid var(--moon-color);
+    border-radius: 26px;
+    padding: 11px 17px;
+    text-decoration: none;
+}
+
+.button-games:hover {
+    background-color: var(--moon-color);
+    color: #3299cc;
+}
+
+.games > img {
+    position: relative;
+    float: right;
+}
+
+.games {
+    background: linear-gradient(120deg, #2E3192, #15cdcd);
+    animation-timing-function: ease-in-out;
+    border-top: 3px solid var(--moon-color);
+    color: var(--moon-color);
+    margin: 0;
+    text-align: justify;
+    padding: 50px;
+}
+
+.course-list {
+    background: linear-gradient(140deg, var(--main-green), var(--main-black)) ;
+    border-top: 3px solid var(--moon-color);
+    color: var(--moon-color);
     display: block;
+    margin: 0;
+    text-align: justify;
+    padding: 50px 60px;    
+}    
+.box {
+    height: 220px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--moon-color);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 40px 10px;
 }
 
-.menu-icon-1 {
+.box > img {
+    max-height: 160%;
+    max-width: 160%;
+}
+
+.box:hover {
+    opacity: 0.7;
+}
+
+.img-fluid {
+    position: relative;
+    left: 50%;
+}
+
+.div-course {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/*Courses section ends here*/
+/*Footer section styling*/
+footer {
+    border-top: 1px solid var(--moon-color);
+    background-color: var(--main-black);
+    color: var(--moon-color);
+    padding: 40px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-brand {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Architects Daughter", sans-serif;
+}
+
+.footer-brand a {
+    font-size: 24px;
+    color: var(--main-green);
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer-brand a span {
     color: var(--moon-color);
 }
+
+.footer-section {
+    flex: 1 1 50%;
+    margin-bottom: 20px;
+}
+
+.footer-section h2.heading {
+    font-size: 20px;
+    color: var(--main-green);
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 10px 0;
+}
+
+.social-links ul, .quick-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links ul li, .quick-links li {
+    display: inline-block;
+}
+
+.social-links ul li a, .quick-links li a {
+    color: var(--main-green);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-links ul li a:hover, .quick-links li a:hover {
+    color: var(--moon-color);
+}
+
+.quick-links li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.quick-links li a {
+    font-size: 16px;
+}
+
+.quick-links li a:hover {
+    text-decoration: underline;
+}
+
+.links-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.contact  {
+    color: var(--moon-color);
+    margin: 0;
+    text-align: justify;
+    padding: 50px 60px;    
+}
+
+.footer-brand.contact {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    color: var(--moon-color);
+    margin: 0;
+    padding: 50px 0;
+}
+
+.footer-brand.contact img {
+    margin: 20px 0; 
+}
+
+.message {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+    margin-top: 20px;
+}
+
+.message > h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 410;
+}
+
+.message {
+    position: relative;
+    width: 100%;
+}
+
+.message textarea {
+    background-color: var(--main-black);
+    border: 3px solid var(--main-white);
+    border-radius: 11px;
+    border-top: 15px solid var(--moon-color);
+    outline: none;
+    padding: 10px;
+    width: 90%;
+    margin-top: 10px;
+    height: 120px; 
+    font-size: 16px;
+    color: var(--main-white);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 250;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.message textarea:focus {
+    border-color: var(--main-white);
+}
+
+.send-message {
+    background-color: var(--main-green);
+    color: var(--moon-color);
+    border: 2px solid var(--moon-color);
+    border-radius: 15px;
+    padding: 10px 70px;
+    margin-top: 15px;
+    font-family: "Anek Devanagari", sans-serif;
+    font-size: 2vh;
+    font-weight: 400;
+}
+
+.send-message:hover {
+    background-color: var(--moon-color);
+    color: rgb(13, 139, 13);
+}
+/*Footer section styling*/
