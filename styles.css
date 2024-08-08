@@ -1071,7 +1071,7 @@ footer {
     height: 100%;
     overflow: hidden;
     background: var(--main-green); 
-    z-index: 9999;
+    z-index: 999999;
   }
   
   #pulse-wrapper #pulse {
@@ -1267,6 +1267,7 @@ dialog {
     color: #6c767a;
     line-height: 1.9;
   }
+
   @media (min-width: 500px) {
     .content {
       width: 43%;
@@ -1318,4 +1319,24 @@ nav:hover .menu-items-1 {
 
 .menu-icon-1 {
     color: var(--moon-color);
+}
+
+@media (max-width: 350px) {
+    .hero-content button {
+        width: 90%;
+    }
+    body.night .hero-content {
+        border-radius: 20px;
+        padding: 5px;
+        margin: 10px;
+        margin-top: 35vh;
+        font-size: 1.5vh;
+    }
+    body.day .hero-content {
+        border-radius: 20px;
+        padding: 5px;
+        margin: 10px;
+        margin-top: 35vh;
+        font-size: 1.5vh;
+    }
 }
