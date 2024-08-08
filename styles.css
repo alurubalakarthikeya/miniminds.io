@@ -523,7 +523,7 @@ nav ul.active {
     color: var(--moon-color);
     padding: 18px;
     font-size: 2.2vh;
-    border: 3px solid var(--moon-color);
+    border: 2px solid var(--moon-color);
     margin: 10px;
     border-radius: 50%;
 }
@@ -565,7 +565,7 @@ a:visited {
 .sign-in {
     background-color: var(--main-green);
     color: var(--moon-color);
-    border: 3px solid var(--moon-color);
+    border: 2px solid var(--moon-color);
     border-radius: 15px;
     padding: 10px 110px;
     left: 50%;
@@ -1350,7 +1350,7 @@ footer {
 }
 
 .message > h2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Anek Devanagari", sans-serif;
     font-weight: 410;
 }
 
@@ -1371,7 +1371,7 @@ footer {
     height: 120px; 
     font-size: 16px;
     color: var(--main-white);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Anek Devanagari", sans-serif;
     font-weight: 250;
     box-sizing: border-box;
     resize: vertical;
