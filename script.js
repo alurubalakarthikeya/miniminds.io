@@ -188,3 +188,24 @@ function handleScrollEnd() {
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('scroll', handleScrollEnd);
 /*Handling the pointer while scrolling*/
+
+document.addEventListener('scroll', function() {
+  const buttonContainer = document.querySelector('.back-to-top');
+  const icon = buttonContainer.querySelector('i');
+
+  const documentHeight = document.documentElement.scrollHeight; // Total height of the page
+  const viewportHeight = window.innerHeight; // Height of the viewport
+  const scrollPosition = window.scrollY; // Current scroll position
+
+  // Calculate the scroll percentage
+  const scrollPercentage = (scrollPosition / (documentHeight - viewportHeight)) * 100;
+
+  // Calculate the new position of the icon within the container
+  const containerHeight = buttonContainer.offsetHeight;
+  const iconHeight = icon.offsetHeight;
+  const maxPosition = containerHeight - iconHeight; // Maximum position within the container
+  const newPosition = (scrollPercentage / 100) * maxPosition; // Position based on scroll percentage
+
+  // Update the icon's position
+  icon.style.top = `${newPosition}px`;
+});

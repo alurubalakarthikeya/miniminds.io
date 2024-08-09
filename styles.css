@@ -619,11 +619,35 @@ nav:hover .menu-items-1 {
 
 .back-to-top {
     position: fixed;
-    top: 90%;
+    top: 90%; /* Fixed position relative to the viewport */
     right: 8%;
-    font-size: 3.7vh;
+    background-color: var(--main-green);
+    border: 2px solid var(--moon-color);
+    padding: 7px;
+    border-radius: 25px;
+    width: 30px; /* Adjust size as needed */
+    height: 70px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure content doesn’t overflow */
 }
-  
+
+.back-to-top a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
+}
+
+.back-to-top i {
+    position: absolute; /* Absolute position within a */
+    transition: top 0.3s ease; /* Smooth transition */
+}
+
+
 
 .hero {
     display: flex;
