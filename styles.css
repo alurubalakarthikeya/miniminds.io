@@ -754,7 +754,7 @@ nav:hover .menu-items-1 {
     }
     100% {
         transform: translateX(90%);
-        opacity: 0.7;
+        opacity: 1;
         overflow-x: none;
     }
 }
