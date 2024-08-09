@@ -659,8 +659,23 @@ nav:hover .menu-items-1 {
 
 .tree-1 {
     position: relative;
-    top: 22.5px;
-    z-index: 1;
+    top: 21px;
+    z-index: 0;
+}
+
+.container {
+    position: relative; /* Container to manage child elements' positioning */
+    width: 200px; /* Match the width of the tree image */
+    height: 210px; /* Match the height of the walking image */
+    overflow-x: none;
+}
+
+.walk {
+    position: relative;
+    top: -221px;
+    z-index: 100;
+    animation: walking 30s infinite linear;
+    overflow-x: none;
 }
 
 .floating-clouds {
@@ -704,9 +719,15 @@ nav:hover .menu-items-1 {
     margin: 0;
 }
 
-.stone {
+.stone-1 {
     position: relative;
-    top: 34.5px;
+    top: -49px;
+}
+
+.stone-2 {
+    position: relative;
+    top: -49px;
+    left: 130px;
 }
 /*End of home interface*/
 /*Animations*/
@@ -722,6 +743,19 @@ nav:hover .menu-items-1 {
     100% {
         transform: translateX(300%);
         opacity: 0;
+    }
+}
+
+@keyframes walking {
+    0% {
+        transform: translateX(-250%);
+        opacity: 1;
+        overflow-x: none;
+    }
+    100% {
+        transform: translateX(250%);
+        opacity: 1;
+        overflow-x: none;
     }
 }
 
@@ -845,6 +879,14 @@ nav:hover .menu-items-1 {
     .menu-icon {
         display: block;
     }
+
+    .sticky-nav {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000; /* Ensure it stays on top */
+}
 
 
     nav ul li a {
