@@ -6,12 +6,12 @@
     <title>Home | Mini Minds</title>
     <link rel="icon" type="image" href="images/logo.png">
     <link rel="stylesheet" href="styles.css">
-    <!--Fonts links-->
+    <!--Fonts, icons links-->
     <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!--Fonts links-->
+    <!--Fonts, icons links-->
     <!--Animation js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
@@ -30,8 +30,11 @@
     </div>
   </div>
   <!--End of loader-->
+  <!--Navigation bar code starts here-->
   <header class="sticky-nav">
-    <div class="logo"><a href="index.html">Mini <span>Minds</span></a></div>
+    <div class="logo">
+      <a href="index.html">Mini <span>Minds</span></a>
+    </div>
     <nav>
         <div id="menu-icon" class="menu-icon">&#9776;</div>
         <ul id="menu-items">
@@ -54,58 +57,74 @@
     </nav>
 </header>
 <!--Navigation Bar Code ends-->
-    <!--Sun and Moon containers-->
-    <div class="sun-moon-container">
-        <div id="sun" class="sun" onclick="toggleMode()"></div>
-        <div id="moon" class="moon" onclick="toggleMode()"></div>
-    </div>
-    <!--Sun and Moon containers-->
-    <!--Home Page Starts-->
-    <div id="hero" class="hero">
-        <div id="hero-content" class="hero-content fadeInUp-animation">
-            <h2 class="hehe fadeInUp-animation">Where Learning is <span>made practical</span></h2>
-            <ul class="icons ">
-              <li>
-                  <a class="icon" href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-              </li>
-              <li>
-                <a class="icon" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a class="icon" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a class="icon" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-              </li>
-            </ul><br>
-            <button id="submit" class="sign-in" onclick="signUp()">Sign Up</button>
-            <p>no account? <a href="#" onclick="signIn()">Sign In</a></p>
-        </div>
-        <!--Cloud resource-->
-        <div class="floating-clouds">
-            <div class="cloud cloud-1 "><img src="images/cloudy.png" alt="Cloud"></div>
-            <div class="cloud cloud-2 "><img src="images/cloudy.png" alt="Cloud"></div>
-        </div>
-        <!--Cloud resource end-->
-        <div class="back-to-top"><a href="#"><i class="fa-solid fa-circle-arrow-up"></i></a></div>
-      </div>
-    <!--Home Page Ends-->
-    <!--Tree resource-->
-    <div class="container">
-    <img class="tree-1" src="images/tree.png" alt="Tree" width="200px">
-    <img class="stone-1" src="images/rock.png" alt="Stone" width="70px">
-    <img class="stone-2" src="images/rock.png" alt="Stone" width="70px">
-    <img class="walk" src="images/walking.gif" alt="cartoon" height="160px">
+  <!--Sun and Moon containers-->
+  <div class="sun-moon-container">
+      <div id="sun" class="sun" onclick="toggleMode()"></div>
+      <div id="moon" class="moon" onclick="toggleMode()"></div>
   </div>
-    <!--Tree resource end-->
+  <!--Sun and Moon containers-->
+  <!--Home Page Starts-->
+  <div id="hero" class="hero">
+      <div id="hero-content" class="hero-content fadeInUp-animation">
+          <h2 class="hehe fadeInUp-animation">Where Learning is <span>made practical</span></h2>
+          <ul class="icons ">
+            <li>
+                <a class="icon" href="https://www.youtube.com/" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+              <a class="icon" href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a class="icon" href="https://www.linkedin.com/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a class="icon" href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          </ul><br>
+          <button id="submit" class="sign-in" onclick="signUp()">Sign Up</button>
+          <p>no account? 
+            <a href="#" onclick="signIn()">Sign In</a>
+          </p>
+      </div>
+      <!--Cloud resource-->
+      <div class="floating-clouds">
+          <div class="cloud cloud-1 "><img src="images/cloudy.png" alt="Cloud"></div>
+          <div class="cloud cloud-2 "><img src="images/cloudy.png" alt="Cloud"></div>
+      </div>
+      <!--Cloud resource end-->
+      <!--Back to top button-->
+      <div class="back-to-top">
+        <a href="#">
+          <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+      </div>
+      <!--Back to top button-->
+    </div>
+  <!--Home Page Ends-->
+    <!--Tree, stone, human resource-->
+    <div class="container">
+      <img class="tree-1" src="images/tree.png" alt="Tree" width="200px">
+      <img class="stone-1" src="images/rock.png" alt="Stone" width="70px">
+      <img class="stone-2" src="images/rock.png" alt="Stone" width="70px">
+      <img class="walk" src="images/walking.gif" alt="cartoon" height="160px">
+    </div>
+    <!--Tree, stone, human resource end-->
     <!--About section Starts-->
     <div id="about" class="about">
         <h2 class="heading">Why Us?</h2>
         <img class="fade-in-right-target" src="images/about.png" alt="cartoon">
         <div class="space fade-in-left-target">
           <p>Welcome to Mini Minds! Our mission is to help children enrich their school basics while having tons of fun. At Mini Minds, we believe learning should be practical and enjoyable, which is why we've created a special place just for kids aged 5 to 12. Our site is packed with cool games, exciting activities, and interesting stories designed to make learning fun. Our logo represents our commitment to making education both practical and entertaining.</p><br><br>
-          <a class="button-about" href="about.html" >Know More</a>
-      </div>
+          <a class="button-about" href="about.html">Know More</a>
+        </div>
     </div>
     <!--About section Ends-->
     <!--Courses section Starts-->
@@ -135,51 +154,100 @@
     <!--Games section Ends-->
     <!--Course list section Starts-->
     <div id="course-list" class="course-list">
-      <h2 class="heading">Recommended Courses</h2><br>
+      <h2 class="heading">Recommended Courses</h2>
+      <br>
       <div class="div-course">
-      <div class="box fade-in-up-target"><img class="fade-in-up-target" src="images/solar.png" alt=""></div>
-      <div class="box fade-in-up-target"><img src="images/Coding.png" alt=""></div>
-      <div class="box fade-in-up-target"><img class="fade-in-up-target" src="images/Maths.png" alt=""></div>
-      <div class="box fade-in-up-target"><img src="images/Laptop.png" alt=""></div>
-      <div class="box fade-in-up-target"><img class="fade-in-up-target" src="images/Pencil.png" alt=""></div>
+        <div class="box fade-in-up-target">
+          <img class="fade-in-up-target" src="images/solar.png" alt="">
+        </div>
+        <div class="box fade-in-up-target">
+          <img src="images/Coding.png" alt="">
+        </div>
+        <div class="box fade-in-up-target">
+          <img class="fade-in-up-target" src="images/Maths.png" alt="">
+        </div>
+        <div class="box fade-in-up-target">
+          <img src="images/Laptop.png" alt="">
+        </div>
+        <div class="box fade-in-up-target">
+          <img class="fade-in-up-target" src="images/Pencil.png" alt="">
+        </div>
     </div>
     </div>
-    <!--Course list section Ends-->
- <!--Contact Us section starts-->
- <footer>
-  <div class="footer-container">
+<!--Course list section Ends-->
+<!--Contact Us section starts-->
+<footer>
+    <!--Contact section intro div-->
+    <div class="footer-container">
       <div class="footer-brand contact">
-          <a>@Mini<span>Minds</span></a>
+          <a>@Mini
+            <span>Minds</span>
+          </a>
           <p>Reach us out from contact section for any doubts</p>
       </div>
       <div class="footer-section" id="contact">
           <h2 class="heading">Contacts</h2>
           <div>
-              <p><strong>Address:</strong><br>AP, India</p>
-              <p><strong>Contact:</strong><br>0123456789</p>
+              <p>
+                <strong>Address:</strong>
+                <br>AP, India
+              </p>
+              <p>
+                <strong>Contact:</strong>
+                <br>0123456789
+              </p>
           </div>
       </div>
+      <!--Contact section intro div-->
+      <!--Social links div starts-->
       <div class=" footer-section social-links-div">
         <h2 class="heading">Social</h2>
         <ul class="quick-links">
-            <li><a class="icon" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-            <li><a class="icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a class="icon" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li><a class="icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> FaceBook</a></li>
+            <li>
+              <a class="icon" href="https://www.youtube.com/" target="_blank">
+                <i class="fab fa-youtube"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a class="icon" href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a class="icon" href="https://www.linkedin.com/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="icon" href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook"></i> FaceBook
+              </a>
+            </li>
         </ul>
-    </div>
-    <div class="links-div">
-      <div class="footer-section quick-links-div">
-          <h2 class="heading">Quick Links</h2>
-          <ul class="quick-links">
-              <li><a href="stories.html">Stories</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="contact.html">Contact</a></li>
-          </ul>
       </div>
+      <!--Social links div ends-->
+      <!--Quicks links div starts-->
+      <div class="links-div">
+        <div class="footer-section quick-links-div">
+            <h2 class="heading">Quick Links</h2>
+            <ul class="quick-links">
+                <li>
+                  <a href="stories.html">Stories</a>
+                </li>
+                <li>
+                  <a href="about.html">About Us</a>
+                </li>
+                <li>
+                  <a href="courses.html">Courses</a>
+                </li>
+                <li>
+                  <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <!--Quicks links div ends-->
     </div>
-  </div>
 </footer>
 <!--Contact Us section Ends-->
 <!--classes for special effect at night -->

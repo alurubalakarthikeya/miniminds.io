@@ -619,18 +619,18 @@ nav:hover .menu-items-1 {
 
 .back-to-top {
     position: fixed;
-    top: 85%; /* Fixed position relative to the viewport */
+    top: 85%;
     right: 8%;
     background-color: var(--main-green);
     border: 2px solid var(--moon-color);
     padding: 7px;
     border-radius: 25px;
-    width: 30px; /* Adjust size as needed */
-    height: 70px; /* Adjust size as needed */
-    display: flex;
+    width: 30px; 
+    height: 90px; 
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensure content doesn’t overflow */
+    overflow: hidden; 
+    z-index: 99999;
 }
 
 .back-to-top a {
@@ -638,16 +638,14 @@ nav:hover .menu-items-1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Full height of the container */
-    width: 100%; /* Full width of the container */
+    height: 100%; 
+    width: 100%;
 }
 
 .back-to-top i {
-    position: absolute; /* Absolute position within a */
-    transition: top 0.3s ease; /* Smooth transition */
+    position: absolute; 
+    transition: top 0.4s ease;
 }
-
-
 
 .hero {
     display: flex;
@@ -655,6 +653,7 @@ nav:hover .menu-items-1 {
     align-items: center;
     height: 47vh;
     text-align: center;
+    overflow-x: none;
 }
 
 .tree-1 {
@@ -664,17 +663,18 @@ nav:hover .menu-items-1 {
 }
 
 .container {
-    position: relative; /* Container to manage child elements' positioning */
-    width: 200px; /* Match the width of the tree image */
-    height: 210px; /* Match the height of the walking image */
+    position: relative; 
+    width: 100%; 
+    max-width: 200px;
+    height: 210px;
     overflow-x: none;
 }
 
 .walk {
     position: relative;
-    top: -221px;
+    top: -223px;
     z-index: 100;
-    animation: walking 30s infinite linear;
+    animation: walking 6s infinite linear;
     overflow-x: none;
 }
 
@@ -721,13 +721,13 @@ nav:hover .menu-items-1 {
 
 .stone-1 {
     position: relative;
-    top: -49px;
+    top: -48px;
 }
 
 .stone-2 {
     position: relative;
-    top: -49px;
-    left: 130px;
+    top: -48px;
+    left: 200px;
 }
 /*End of home interface*/
 /*Animations*/
@@ -748,13 +748,13 @@ nav:hover .menu-items-1 {
 
 @keyframes walking {
     0% {
-        transform: translateX(-250%);
+        transform: translateX(-100%);
         opacity: 1;
         overflow-x: none;
     }
     100% {
-        transform: translateX(250%);
-        opacity: 1;
+        transform: translateX(90%);
+        opacity: 0.7;
         overflow-x: none;
     }
 }
@@ -852,6 +852,14 @@ nav:hover .menu-items-1 {
         z-index: 1;
     }
 
+    .walk {
+        position: relative;
+        top: -223px;
+        z-index: 100;
+        animation: walking 6s infinite linear;
+        overflow-x: none;
+    }
+
     body.day nav ul {
         background-color: var(--main-blue);
         display: none;
@@ -881,11 +889,11 @@ nav:hover .menu-items-1 {
     }
 
     .sticky-nav {
-    position: -webkit-sticky; /* For Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background: white;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000; 
 }
 
 
@@ -1029,8 +1037,29 @@ nav:hover .menu-items-1 {
 
     .back-to-top {
     position: fixed;
-    top: 85%; /* Fixed position relative to the viewport */
+    top: 85%; 
     right: 1%;
+    }
+
+    .walk {
+        position: relative;
+        top: -223px;
+        z-index: 100;
+        animation: walking 20s infinite linear;
+        overflow-x: none;
+    }
+
+    @keyframes walking {
+        0% {
+            transform: translateX(-100%);
+            opacity: 1;
+            overflow-x: none;
+        }
+        100% {
+            transform: translateX(480%);
+            opacity: 1;
+            overflow-x: none;
+        }
     }
 }
 
