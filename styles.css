@@ -727,7 +727,7 @@ nav:hover .menu-items-1 {
 .stone-2 {
     position: relative;
     top: -48px;
-    left: 200px;
+    left: 180px;
 }
 /*End of home interface*/
 /*Animations*/
@@ -833,6 +833,11 @@ nav:hover .menu-items-1 {
     header {
         padding: 12px;
         position: sticky;
+    }
+
+    body.day .icons > li > a> i {
+        padding: 17px;
+        font-size: 2.3vh;
     }
 }
 
