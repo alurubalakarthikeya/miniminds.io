@@ -189,7 +189,7 @@ window.addEventListener('scroll', handleScroll);
 window.addEventListener('scroll', handleScrollEnd);
 /*Handling the pointer while scrolling*/
 
-document.addEventListener('scroll', function() {
+function updateIconPosition() {
   const buttonContainer = document.querySelector('.back-to-top');
   const icon = buttonContainer.querySelector('i');
 
@@ -208,4 +208,10 @@ document.addEventListener('scroll', function() {
 
   // Update the icon's position
   icon.style.top = `${newPosition}px`;
-});
+}
+
+// Update icon position on scroll
+document.addEventListener('scroll', updateIconPosition);
+
+// Update icon position on page load
+window.addEventListener('load', updateIconPosition);
