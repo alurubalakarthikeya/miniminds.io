@@ -374,7 +374,7 @@ nav ul {
 
 nav ul li {
     margin: 0 10px;
-    z-index: 9991;
+    z-index: 99999;
     background-color: transparent;
 }
 
@@ -384,6 +384,7 @@ nav ul li a {
     border: 3px solid transparent;
     padding: 7px 20px;
     border-radius: 25px;
+    z-index: 99999;
     margin-left: 20px;
     transition: 0.5s ease-in-out;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
@@ -549,7 +550,7 @@ a:visited {
     font-size: 3vh;
     margin-top: 35vh;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     animation: 1.5s fadeInUp;
 }
 
@@ -727,7 +728,7 @@ nav:hover .menu-items-1 {
 .stone-2 {
     position: relative;
     top: -48px;
-    left: 180px;
+    left: 170px;
 }
 /*End of home interface*/
 /*Animations*/
@@ -837,7 +838,7 @@ nav:hover .menu-items-1 {
 
     body.day .icons > li > a> i {
         padding: 17px;
-        font-size: 2.3vh;
+        font-size: 2.5vh;
     }
 }
 
@@ -854,7 +855,7 @@ nav:hover .menu-items-1 {
         overflow: hidden;
         right: 0px;
         transform: translateX(15px);
-        z-index: 1;
+        z-index: 10000000;
     }
 
     .walk {
@@ -878,7 +879,7 @@ nav:hover .menu-items-1 {
         right: 0px;
         transform: translateX(15px);
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.09);
-        z-index: 1;
+        z-index: 10000000;
     }
 
     nav ul.active {
@@ -909,6 +910,7 @@ nav:hover .menu-items-1 {
         position: relative;
         margin: 0px 0px 20px 0px;
         width: 100%;
+        z-index: 999999;
     }
     
     nav ul li a:hover {
