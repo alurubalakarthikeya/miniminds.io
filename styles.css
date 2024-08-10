@@ -675,7 +675,7 @@ nav:hover .menu-items-1 {
     position: relative;
     top: -223px;
     z-index: 100;
-    animation: walking 6.5s infinite linear;
+    animation: walking 7s infinite linear;
     animation-delay: 0.5s;
     overflow-x: none;
 }
@@ -684,7 +684,7 @@ nav:hover .menu-items-1 {
     position: relative;
     top: -306px;
     z-index: 100;
-    animation: walking-1 8s infinite linear;
+    animation: walking-1 8.5s infinite linear;
     overflow-x: none;
 }
 
@@ -763,7 +763,7 @@ nav:hover .menu-items-1 {
         overflow-x: none;
     }
     100% {
-        transform: translateX(90%);
+        transform: translateX(100%);
         opacity: 1;
         overflow-x: none;
     }
@@ -777,7 +777,7 @@ nav:hover .menu-items-1 {
         overflow-x: none;
     }
     100% {
-        transform: translateX(400%);
+        transform: translateX(500%);
         opacity: 1;
         overflow-x: none;
     }
@@ -1556,4 +1556,5 @@ footer {
     background-color: var(--moon-color);
     color: rgb(13, 139, 13);
 }
+
 /*Footer section styling*/
