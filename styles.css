@@ -690,7 +690,6 @@ body.night .thoughts {
     position: relative;
     top: -500px;
     left: 130px;
-    z-index: 100;
     overflow-x: none;
 }
 
@@ -703,7 +702,6 @@ body.day .thoughts-day {
     position: relative;
     top: -500px;
     left: 130px;
-    z-index: 100;
     overflow-x: none;
 }
 
@@ -1163,6 +1161,17 @@ body.night .thoughts-day {
             transform: translateX(-800%);
             overflow-x: none;
         }
+    }
+
+    .thoughts {
+        height: 150px;
+        position: relative;
+        top: -700px;
+    }
+
+    .thoughts-day {
+        height: 150px;
+
     }
 }
 
