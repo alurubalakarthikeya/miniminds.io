@@ -133,7 +133,7 @@ body.night nav ul {
 
 
 body.night .cursor-dot {
-    background-color: var(--moon-color);
+    background-color: var(--main-white);
 }
 /*Night stylings ends here*/
 /*Day stylings starts here*/
@@ -145,6 +145,10 @@ body.day header {
     background: rgba(167,214,220,0.75);
     position: sticky;
     top: 0;
+}
+
+body.day .cursor-dot {
+    background-color: var(--main-blue);
 }
 
 body.day .logo a {
@@ -552,6 +556,7 @@ a:visited {
     position: relative;
     z-index: 100;
     animation: 1.5s fadeInUp;
+    animation: 6s floating-img ease-in-out infinite;
 }
 
 .hero-content span {
@@ -680,13 +685,36 @@ nav:hover .menu-items-1 {
     overflow-x: none;
 }
 
-.thoughts {
+body.night .thoughts {
     display: block;
     position: relative;
     top: -500px;
     left: 130px;
     z-index: 100;
     overflow-x: none;
+}
+
+body.day .thoughts {
+    display: none;
+}
+
+body.day .thoughts-day {
+    display: block;
+    position: relative;
+    top: -500px;
+    left: 130px;
+    z-index: 100;
+    overflow-x: none;
+}
+
+body.night .thoughts-day {
+    display: none;
+}
+
+.ani-img {
+    animation: 6s floating-img ease-in-out infinite;
+    box-shadow: none !important;
+    animation-delay: 5s;
 }
 
 
@@ -751,6 +779,18 @@ nav:hover .menu-items-1 {
 }
 /*End of home interface*/
 /*Animations*/
+@keyframes floating-img {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 @keyframes float {
     0% {
         transform: translateX(-80%);
@@ -850,14 +890,17 @@ nav:hover .menu-items-1 {
     .about > img {
         height: 160px;
         float: left;
+        animation: floating-img 6s ease-in-out infinite;
     }
 
     .courses > img {
         height: 160px;
+        animation: floating-img 6s ease-in-out infinite;
     }
 
     .games > img {
         height: 170px;
+        animation: floating-img 6s ease-in-out infinite;
     }
 
     .sign-in {
@@ -1087,7 +1130,7 @@ nav:hover .menu-items-1 {
         position: relative;
         top: -223px;
         z-index: 100;
-        animation: walking 27s infinite linear;
+        animation: walking 20s infinite linear;
         overflow-x: none;
     }
 
@@ -1102,7 +1145,7 @@ nav:hover .menu-items-1 {
 
     @keyframes walking {
         0% {
-            transform: translateX(800%);
+            transform: translateX(480%);
             overflow-x: none;
         }
         100% {
@@ -1113,7 +1156,7 @@ nav:hover .menu-items-1 {
 
     @keyframes walking-1 {
         0% {
-            transform: translateX(2000%);
+            transform: translateX(1850%);
             overflow-x: none;
         }
         100% {
