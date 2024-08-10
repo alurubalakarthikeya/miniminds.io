@@ -1559,6 +1559,7 @@ footer {
     margin: 20px 0; 
 }
 
+
 .message {
     display: flex;
     flex-direction: column; 
@@ -1615,4 +1616,5 @@ footer {
     background-color: var(--moon-color);
     color: rgb(13, 139, 13);
 }
+
 /*Footer section styling*/
