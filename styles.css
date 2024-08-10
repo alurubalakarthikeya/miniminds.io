@@ -758,12 +758,12 @@ nav:hover .menu-items-1 {
 
 @keyframes walking {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(100%);
         opacity: 1;
         overflow-x: none;
     }
     100% {
-        transform: translateX(100%);
+        transform: translateX(-100%);
         opacity: 1;
         overflow-x: none;
     }
@@ -772,12 +772,12 @@ nav:hover .menu-items-1 {
 
 @keyframes walking-1 {
     0% {
-        transform: translateX(-300%);
+        transform: translateX(500%);
         opacity: 1;
         overflow-x: none;
     }
     100% {
-        transform: translateX(500%);
+        transform: translateX(-300%);
         opacity: 1;
         overflow-x: none;
     }
@@ -1077,7 +1077,7 @@ nav:hover .menu-items-1 {
         position: relative;
         top: -223px;
         z-index: 100;
-        animation: walking 28s infinite linear;
+        animation: walking 27s infinite linear;
         overflow-x: none;
     }
 
@@ -1092,12 +1092,12 @@ nav:hover .menu-items-1 {
 
     @keyframes walking {
         0% {
-            transform: translateX(-100%);
+            transform: translateX(800%);
             opacity: 1;
             overflow-x: none;
         }
         100% {
-            transform: translateX(800%);
+            transform: translateX(-100%);
             opacity: 1;
             overflow-x: none;
         }
@@ -1105,12 +1105,12 @@ nav:hover .menu-items-1 {
 
     @keyframes walking-1 {
         0% {
-            transform: translateX(-800%);
+            transform: translateX(2000%);
             opacity: 1;
             overflow-x: none;
         }
         100% {
-            transform: translateX(2000%);
+            transform: translateX(-800%);
             opacity: 1;
             overflow-x: none;
         }
