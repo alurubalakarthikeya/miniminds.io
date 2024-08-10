@@ -680,6 +680,16 @@ nav:hover .menu-items-1 {
     overflow-x: none;
 }
 
+.thoughts {
+    display: block;
+    position: relative;
+    top: -500px;
+    left: 130px;
+    z-index: 100;
+    overflow-x: none;
+}
+
+
 .walk-1 {
     position: relative;
     top: -306px;
@@ -1083,7 +1093,7 @@ nav:hover .menu-items-1 {
 
     .walk-1 {
         position: relative;
-        top: -305px;
+        top: -306px;
         z-index: 100;
         animation: walking-1 30s infinite linear;
         animation-delay: 0.5s;
