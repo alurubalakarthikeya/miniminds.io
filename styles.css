@@ -1093,12 +1093,10 @@ nav:hover .menu-items-1 {
     @keyframes walking {
         0% {
             transform: translateX(800%);
-            opacity: 1;
             overflow-x: none;
         }
         100% {
             transform: translateX(-100%);
-            opacity: 1;
             overflow-x: none;
         }
     }
@@ -1106,12 +1104,10 @@ nav:hover .menu-items-1 {
     @keyframes walking-1 {
         0% {
             transform: translateX(2000%);
-            opacity: 1;
             overflow-x: none;
         }
         100% {
             transform: translateX(-800%);
-            opacity: 1;
             overflow-x: none;
         }
     }
@@ -1556,5 +1552,4 @@ footer {
     background-color: var(--moon-color);
     color: rgb(13, 139, 13);
 }
-
 /*Footer section styling*/
