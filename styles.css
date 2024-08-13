@@ -625,7 +625,7 @@ nav:hover .menu-items-1 {
 
 .back-to-top {
     position: fixed;
-    top: 85%;
+    top: 80%;
     right: 8%;
     background-color: var(--main-green);
     border: 2px solid var(--moon-color);
