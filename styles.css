@@ -59,7 +59,7 @@ body.night {
 body.night header {
     background-color: rgba(44,62,80,1);
     top: 0;
-    position: sticky;
+    position: fixed;
 }
 
 body.night .logo {
@@ -143,7 +143,7 @@ body.day {
 
 body.day header {
     background: rgba(167,214,220,0.75);
-    position: sticky;
+    position: fixed;
     top: 0;
 }
 
@@ -657,7 +657,7 @@ nav:hover .menu-items-1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 47vh;
+    height: 55vh;
     text-align: center;
     overflow-x: none;
 }
