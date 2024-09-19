@@ -12,11 +12,11 @@
    <img src="images/miniminds.png" alt="Random Image" width="800px">
 </p>
 <h2 id="technologies">💻 Technologies</h2>
-List of all technologies you used
-- Languages: HTML, CSS, JS
-- Version control: Git, Github
-- Frameworks: Bootstrap
-- Others: Canva, Photoshop
+List of all technologies you used <br>
+- Languages: HTML, CSS, JS <br>
+- Version control: Git, Github <br>
+- Frameworks: Bootstrap <br>
+- Others: Canva, Photoshop <br>
 <h2 id="started">🚀 Getting started</h2>
 To run this project locally copy the below link and you can clone this project and make your version of this project
 <h3>Cloning</h3>
