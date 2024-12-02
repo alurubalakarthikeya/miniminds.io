@@ -12,7 +12,7 @@
    <img src="images/miniminds.png" alt="Random Image" width="800px">
 </p>
 <h2 id="technologies">💻 Technologies</h2>
-List of all technologies you used <br>
+List of all technologies used <br>
 - Languages: HTML, CSS, JS <br>
 - Version control: Git, Github <br>
 - Frameworks: Bootstrap <br>
